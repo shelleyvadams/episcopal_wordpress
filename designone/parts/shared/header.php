@@ -10,7 +10,7 @@
 
 		<h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 		
-		<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="logo"/>
+		<img class="logo" src="<?php echo get_bloginfo('template_url'); ?>/img/logo.png" alt="logo"/>
 	</div>
 
 	<div class="main-border"></div>
