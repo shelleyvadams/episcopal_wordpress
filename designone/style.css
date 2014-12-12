@@ -1,0 +1,642 @@
+/*
+Theme Name: 	Design One - Blue
+Theme URI: 		http://viewportindustries.com/products/starkers
+Description: 	Episcopal Church Theme
+Version: 		1.0
+Author: 		John Balnaves
+Author URI: 	http://johnbalnaves.com
+Tags: 			Blog, News
+*/
+
+/*
+===========================
+CONTENTS:
+
+01 Sensible defaults
+02 Typography
+03 Author Styles 
+04 Media queries 
+===========================
+*/
+
+/* ---------------------------------------------------------------------------------------------------------- 
+01 Sensible defaults ----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+@import "css/reset.css";
+
+div,
+article,
+section,
+header,
+footer,
+nav,
+li					{ position:relative; /* For absolutely positioning elements within containers (add more to the list if need be) */ }
+.group:after 		{ display:block; height:0; clear:both; content:"."; visibility:hidden; /* For clearing */ }
+body 				{ background:#fff; /* Don't forget to style your body to avoid user overrides */ }
+::-moz-selection 	{ background:#ff0; color:#333; }
+::selection 		{ background:#ff0; color:#333; }
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Clear Fixing */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ---------------------------------------------------------------------------------------------------------- 
+02 Typography -----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+/*
+
+14 / 16	= 		0.875em 		(14px equivalent)
+16 / 16	= 		1em 			(16px equivalent)
+18 / 16 = 		1.125em 		(18px equivalent)
+21 / 16 = 		1.3125em 		(21px equivalent)
+24 / 16 = 		1.5em 			(24px equivalent)
+30 / 16 = 		1.875em 		(30px equivalent)
+
+*/
+
+body,
+input,
+textarea 			{ /* We strongly recommend you declare font-weight using numerical values, but check to see which weights you're exporting first */ }
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 					{ font-weight:bold; /* This helps to identify headings at the initial build stage, but you should write something more precise later on */ }
+
+/* ---------------------------------------------------------------------------------------------------------- 
+03 Authors Styles -------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+body {
+	background: #777;
+	color: #877665;
+	font-smoothing:antialiased;
+	-webkit-font-smoothing:antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, nav {
+	font-family: 'Arial Narrow', sans-serif;
+	text-transform: uppercase;
+}
+
+div.main-wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+div.section-wrapper {
+	background-color: #b8aea5;
+}
+
+a:link, a:visited {
+	color: #056cb5;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	text-decoration: underline;
+}
+
+/* Header */
+header {
+	background-image: url('img/header.jpg');
+}
+
+div.simple-social-icons {
+	padding-top: 10px;
+	padding-left: 5px;
+}
+
+div.header-wrapper {
+	padding: 35px 25px 25px 25px;
+	position: relative;
+}
+
+h1 {
+	font-size: 20px;
+	text-transform: uppercase;
+	display: inline-block;
+}
+
+h1 a:link, h1 a:visited {
+	color: #fff;
+}
+
+img.logo {
+	width: 160px;
+	position: absolute;
+	top: 1px;
+	right: 20px;
+	z-index: 1;
+	margin-top: 10px;
+}
+
+div.slide-show {
+	height:auto;
+}
+
+div.main-border {
+	background: url('img/border.png');
+	height: 8px;
+}
+
+/* Navigation */
+nav {
+	display: table;
+	z-index: 1;
+}
+
+div.menu-primary-navigation-container {
+	background-color: #056cb5;
+	width: 700px;
+	float: left;
+}
+
+nav li {
+	display: inline-block;
+	margin-right: -4px;
+}
+
+nav a:link, nav a:visited {
+	padding: 0px 14px;
+	text-align: center;
+	font-size: 16px;
+	text-decoration: none;
+	display: block;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 60px;
+}
+
+nav a:hover, nav a:active {
+	color: #056cb5;
+	background-color: #b8aea5;
+}
+
+li.current_page_item a {
+	color: #056cb5;
+	background-color: #dbd6d0;
+}
+
+/* Main Content */
+section {
+	min-height: 1400px;
+	width: 700px;
+	float: left;
+	background-color: #dbd6d0;
+	padding: 25px 0;
+    -webkit-box-shadow: 8px 0px 25px -2px #888;
+    box-shadow: 8px 0px 25px -2px #888;
+}
+
+h3 {
+	background: #056cb5;
+	padding: 30px 30px;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+article.regular-page {
+	padding: 0px 25px 0 25px;
+}
+
+/* Home Page Posts */
+div.home-wrapper {
+	padding-right: 25px;
+}
+
+article.other-post {
+	display: inline-block;
+	width: 32.3%;
+	padding: 25px 0px 0px 25px;
+	color: #877665;
+	vertical-align: top;
+}
+
+article.other-post h4 {
+	color: #056cb5;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+article.other-post p {
+	margin-top: 10px;
+}
+
+article.other-post img {
+	width: 150px;
+	height: 150px;
+	margin-bottom: 10px;
+}
+
+article.main-post {
+	width: 650px;
+	padding: 0;
+	margin-left: 25px;
+	font-size: 20px;
+}
+
+article.main-post h4{
+	color: #056cb5;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+article.main-post img {
+	float: left;
+	width: 250px;
+	height: 250px;
+	margin-top: 0px;
+	margin-right: 15px;
+	margin-bottom: 0px;
+}
+
+article.main-post a:link, 
+article.main-post a:visited {
+	color: #056cb5;
+	font-size: 40px;
+}
+
+article.main-post a:hover, 
+article.main-post a:active {
+	text-decoration: underline;
+}
+
+article.second-posts {	
+	width: 49.1%;
+	display: inline-block;
+}
+
+article.second-posts h4 {
+	color: #056cb5;
+	font-size: 22px;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+article.second-posts img {
+	float: none;
+	width: 200px;
+	height: 200px;
+	margin-bottom: 10px;
+}
+
+/* Home Page: video */
+article.video-post {
+	padding: 0px 0 25px 25px;
+	
+}
+article.video-post iframe {
+	border: 10px solid #b8aea5;
+}
+
+article.rss-post {
+	float: left;
+	width: 46.2%;
+	margin-left: 25px;
+	background-color: #b8aea5;
+	padding: 20px;
+	color: #056cb5;
+}
+
+/* About */
+span.letter {
+	font-size: 70px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: -20px;
+	position: relative;
+	top: -10px;
+}
+
+/* Parish News */
+div.table-wrapper {
+	padding: 0 15px;
+}
+
+table.posts-table , tbody, tr {
+	width: 100%;
+}
+
+th, td {
+	padding: 10px;
+}
+
+th {
+	text-align: left;
+	padding-bottom: 10px;
+}
+
+td.date {
+	width: 115px;
+}
+
+th.author, td.author {
+	text-align: right;
+}
+
+article.post-article {
+	padding: 0 25px;
+	color: #877665;
+}
+
+div.align-left {
+	float: left;
+	margin-top: 50px;
+	margin-left: 20px;
+}
+
+div.align-right {
+	float: right;
+	margin-top: 50px;
+	margin-right: 20px;
+}
+
+/* Single Post*/
+article.post-article img {
+	float: left;
+	width: 200px;
+	height: 200px;
+	margin-top: 3px;
+	margin-right: 15px;
+	margin-bottom: 5px;
+}
+
+h4.article-header {
+	color: #056cb5;
+	font-size: 18px; 
+}
+
+p.article-info {
+	margin-top: 5px;
+	margin-bottom: 25px;
+	font-size: 14px;
+}
+
+/* Contacts Page */
+section.contact {
+	height: 200px;
+}
+
+article.address {
+	padding: 0px 25px 0 25px;
+}
+
+article.address p {
+	float: left;
+	width: 250px;
+	color: #877665;
+	margin: 0;
+}
+
+article.address iframe {
+	float: right;
+	width: 400px;
+	height: 300px;
+}
+
+h4.banner {
+	padding: 20px 0 20px 0;
+	margin: 25px 0;
+	text-align: center;
+	width: 700px;
+	color: #fff;
+	font-family: 'Arial Narrow', sans-serif;
+	font-size: 20px;
+	background: url('img/header.jpg') no-repeat center center;
+}
+
+article.person {
+	width: 33%;
+	float: left;
+	padding-left: 25px;
+}
+
+article.person img {
+	width: 100%;
+	height: auto;
+}
+
+article.person ul {
+	margin: 10px 0 50px 0;
+	color: #877665;
+}
+
+article.person ul a {
+	color: #877665;
+}
+
+/* Side Bar */
+aside {
+	width: 260px;
+	float: left;
+	padding: 25px;
+	z-index: -1;
+	color: #fff;
+	font-weight: lighter;
+}
+
+nav h2 {
+	width: 260px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	text-transform: uppercase;
+	font-size: 25px;
+	color: #fff;
+	border-left: 2px solid #b8aea5;
+	background: url('img/header.jpg') no-repeat center center;
+}
+
+div.sidebar-contents p {
+	padding-bottom: 35px;
+	margin-bottom: 0;
+}
+
+h2.sidebar, 
+h2.widgettitle {
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 10px;
+	margin-bottom: 25px;
+	font-size: 20px;
+	color: #fff;
+	border-top: 2px solid #056cb5;
+	border-bottom: 2px solid #056cb5;
+	padding: 10px 0;
+}
+
+/* sidebar - about */
+a.more-link:link, 
+a.more-link:visited {
+	color: #056cb5;
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* sidebar - service times */
+div.service-times-wrapper {
+	margin-top: 15px;
+	padding-bottom: 35px;
+}
+
+span.times {
+	color: #056cb5;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+/* sidebar - subscribe */
+div.subscribe-wrapper {
+	margin-top: 15px;
+	padding-bottom: 35px;
+}
+
+input {
+	width: 100%;
+}
+
+input[type=submit] {
+	border: none;
+	background: -webkit-linear-gradient(#046eb5, #044c7d);
+	background: -o-linear-gradient(#046eb5, #044c7d);
+	background: -moz-linear-gradient(#046eb5, #044c7d);
+	background: linear-gradient(#046eb5, #044c7d);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#046eb5', endColorstr='#044c7d',GradientType=0 ); /* IE6-9 */
+	text-align: center;
+	padding: 0;
+	margin-top: 10px;
+	padding: 15px;
+	text-transform: uppercase;
+	color: #fff;
+	font-family: 'Arial Narrow', sans-serif;
+}
+
+/* sidebar - parish leaders */
+div.parish-leaders-wrapper {
+	margin-top: 15px;
+	padding-bottom: 35px;
+}
+
+article.people-sidebar {
+	padding: 5px 0;
+}
+
+article.people-sidebar img{
+	float: left;
+	width: 30%;
+	height: auto;
+}
+
+article.people-sidebar ul {
+	float: left;
+	width: 70%;
+	font-size: 13px;
+	padding: 5px 0 0 10px;
+}
+
+article.people-sidebar ul a{
+	color: #fff;
+}
+
+article.people-sidebar h4 {
+	font-style: italic;
+	font-family: "Times New Roman", Times, serif;
+	text-transform: none;
+}
+
+div.sidebar-contents p.button {
+	border-bottom: none;
+	background: -webkit-linear-gradient(#046eb5, #044c7d); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#046eb5, #044c7d); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#046eb5, #044c7d); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#046eb5, #044c7d); /* Standard syntax */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#046eb5', endColorstr='#044c7d',GradientType=0 ); /* IE6-9 */
+	text-align: center;
+	padding: 0;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+div.sidebar-contents p.button a:link,
+div.sidebar-contents p.button a:visited {
+	padding: 15px 30px;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	font-family: 'Arial Narrow', sans-serif;
+}
+
+/* Footer */
+footer {
+	height: 160px;
+	background-color: #056cb5;
+	z-index: 1;
+}
+
+footer p {
+	margin: 0;
+	padding: 15px 0 0 20px;
+	color: #fff;
+}
+
+div.footer-logos {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 0 20px 15px 20px;
+}
+
+div.footer-logos img{
+	float: left;
+}
+
+
+h2.footer-welcome {
+	text-align: right;
+	text-transform: lowercase;
+	font-family: "Times New Roman", Times, serif;
+	font-style: italic;
+	font-size: 24px;
+	color: #fff;
+	border: none;
+	float: right;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------- 
+04 Media queries (using a mobile-first approach) ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+/* 400 and up */
+@media screen and (min-width:400px) {
+
+					{ /* Place your styles here for all widths greater than 400px */ }
+
+}
+
+/* Retina Display */
+@media screen and (-webkit-min-device-pixel-ratio:2) {
+
+					{ /* Place your styles here for all 'Retina' screens */ }
+
+}
