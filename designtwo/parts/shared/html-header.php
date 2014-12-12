@@ -3,9 +3,6 @@
 <!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]--> 
 <!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]--> 
 <!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]--> 
-<!--[if lte IE 8]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 	<head>
 		<!--[if lte IE 8]>
