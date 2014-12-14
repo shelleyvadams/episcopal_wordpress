@@ -4,44 +4,44 @@
 	 *
 	 * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
 	 *
- 	 * @package 	WordPress
- 	 * @subpackage 	Starkers
- 	 * @since 		Starkers 4.0
+	 * @package     WordPress
+	 * @subpackage  Starkers
+	 * @since       Starkers 4.0
 	 */
 
 	/* ========================================================================================================================
-	
+
 	Required external files
-	
+
 	======================================================================================================================== */
 
 	require_once( 'external/starkers-utilities.php' );
 
 	/* ========================================================================================================================
-	
+
 	Theme specific settings
 
 	Uncomment register_nav_menus to enable a single menu with the title of "Primary Navigation" in your theme
-	
+
 	======================================================================================================================== */
 
 	// $args = array(
-	// 	'width'         => 195,
-	// 	'flex-height'   => true,
-	// 	'height'        => 195,
-	// 	'header-text'   => false,
-	// 	'default-image' => get_template_directory_uri() . '/img/parish-logo.jpg',
+	//	'width'         => 195,
+	//	'flex-height'   => true,
+	//	'height'        => 195,
+	//	'header-text'   => false,
+	//	'default-image' => get_template_directory_uri() . '/img/parish-logo.jpg',
 	// );
 	// add_theme_support( 'custom-header', $args );
 
 	add_theme_support('post-thumbnails');
-	
+
 	register_nav_menus(array('primary' => 'Primary Navigation'));
 
 	/* ========================================================================================================================
-	
+
 	Actions and Filters
-	
+
 	======================================================================================================================== */
 
 	add_action( 'wp_enqueue_scripts', 'starkers_script_enqueuer' );
@@ -49,19 +49,19 @@
 	add_filter( 'body_class', array( 'Starkers_Utilities', 'add_slug_to_body_class' ) );
 
 	/* ========================================================================================================================
-	
+
 	Custom Post Types - include custom post types and taxonimies here e.g.
 
 	e.g. require_once( 'custom-post-types/your-custom-post-type.php' );
-	
+
 	======================================================================================================================== */
 
 
 
 	/* ========================================================================================================================
-	
+
 	Scripts
-	
+
 	======================================================================================================================== */
 
 	/**
@@ -77,24 +77,24 @@
 
 		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
         wp_enqueue_style( 'screen' );
-	}	
+	}
 
 	/* ========================================================================================================================
-	
+
 	Comments
-	
+
 	======================================================================================================================== */
 
 	/**
-	 * Custom callback for outputting comments 
+	 * Custom callback for outputting comments
 	 *
 	 * @return void
 	 * @author Keir Whitaker
 	 */
 	function starkers_comment( $comment, $args, $depth ) {
-		$GLOBALS['comment'] = $comment; 
+		$GLOBALS['comment'] = $comment;
 		?>
-		<?php if ( $comment->comment_approved == '1' ): ?>	
+		<?php if ( $comment->comment_approved == '1' ): ?>
 		<li>
 			<article id="comment-<?php comment_ID() ?>">
 				<?php echo get_avatar( $comment ); ?>
@@ -106,15 +106,15 @@
 	}
 
 	/* ========================================================================================================================
-	
+
 	Other Functions
-	
+
 	======================================================================================================================== */
 
 	// Add Page excerpts
 	add_action( 'init', 'my_add_excerpts_to_pages' );
 	function my_add_excerpts_to_pages() {
-	     add_post_type_support( 'page', 'excerpt' );
+		add_post_type_support( 'page', 'excerpt' );
 	}
 
 	// Get the id of a page by its name
@@ -125,15 +125,15 @@
 	}
 
 	/* ========================================================================================================================
-	
+
 	Custom Post Types
-	
+
 	======================================================================================================================== */
 
 	add_action( 'init', 'ns_register_customposts', 0 );
 	function ns_register_customposts() {
 
-		register_post_type('people', 
+		register_post_type('people',
 			array(	'label' => 'people',
 			'description' => 'people',
 			'public' => true,
@@ -150,23 +150,23 @@
 			'menu_position' => 28,
 			// 'taxonomies' => array('category'),
 			'labels' => array (
-		  'name' => 'Parish Leaders',
-		  'singular_name' => 'Person',
-		  'menu_name' => 'Parish Leaders',
-		  'add_new' => 'Add Person',
-		  'add_new_review' => 'Add New Person',
-		  'edit' => 'Edit',
-		  'edit_review' => 'Edit Person',
-		  'new_review' => 'New Person',
-		  'view' => 'View Person',
-		  'view_review' => 'View Person',
-		  'search_reviews' => 'Search Person',
-		  'not_found' => 'No Person Found',
-		  'not_found_in_trash' => 'No Person Found in Trash',
-		  'parent' => 'Parent Person',
+			'name' => 'Parish Leaders',
+			'singular_name' => 'Person',
+			'menu_name' => 'Parish Leaders',
+			'add_new' => 'Add Person',
+			'add_new_review' => 'Add New Person',
+			'edit' => 'Edit',
+			'edit_review' => 'Edit Person',
+			'new_review' => 'New Person',
+			'view' => 'View Person',
+			'view_review' => 'View Person',
+			'search_reviews' => 'Search Person',
+			'not_found' => 'No Person Found',
+			'not_found_in_trash' => 'No Person Found in Trash',
+			'parent' => 'Parent Person',
 		),) );
 
-		register_post_type('services', 
+		register_post_type('services',
 			array(	'label' => 'services',
 			'description' => 'services',
 			'public' => true,
@@ -183,44 +183,44 @@
 			'menu_position' => 28,
 			// 'taxonomies' => array('category'),
 			'labels' => array (
-		  'name' => 'Service Times',
-		  'singular_name' => 'Service Time',
-		  'menu_name' => 'Service Times',
-		  'add_new' => 'Add Service Time',
-		  'add_new_review' => 'Add New Service Time',
-		  'edit' => 'Edit',
-		  'edit_review' => 'Edit Service Time',
-		  'new_review' => 'New Service Time',
-		  'view' => 'View Service Time',
-		  'view_review' => 'View Service Time',
-		  'search_reviews' => 'Search Service Time',
-		  'not_found' => 'No Service Time Found',
-		  'not_found_in_trash' => 'No Service Time Found in Trash',
-		  'parent' => 'Parent Service Time',
+			'name' => 'Service Times',
+			'singular_name' => 'Service Time',
+			'menu_name' => 'Service Times',
+			'add_new' => 'Add Service Time',
+			'add_new_review' => 'Add New Service Time',
+			'edit' => 'Edit',
+			'edit_review' => 'Edit Service Time',
+			'new_review' => 'New Service Time',
+			'view' => 'View Service Time',
+			'view_review' => 'View Service Time',
+			'search_reviews' => 'Search Service Time',
+			'not_found' => 'No Service Time Found',
+			'not_found_in_trash' => 'No Service Time Found in Trash',
+			'parent' => 'Parent Service Time',
 		),) );
 	}
 
 	/* ========================================================================================================================
-	
+
 	Custom Meta Boxes
-	
+
 	======================================================================================================================== */
 
 	include_once 'metaboxes/setup.php';
 
 	include_once 'metaboxes/bio-spec.php';
-	 
+
 	include_once 'metaboxes/map-spec.php';
-	
+
 	include_once 'metaboxes/times-spec.php';
 
 
 	/* ========================================================================================================================
-	
+
 	Custom Widgets
-	
+
 	======================================================================================================================== */
-	
+
 	// add widgetized areas
 	if (function_exists('register_sidebar')) {
 
@@ -243,19 +243,19 @@
 
 	// unregister all widgets
 	function jpb_unregister_widgets(){
-	  unregister_widget('WP_Widget_Pages');
-	  unregister_widget('WP_Widget_Calendar');
-	  unregister_widget('WP_Widget_Archives');
-	  unregister_widget('WP_Widget_Links');
-	  unregister_widget('WP_Widget_Meta');
-	  unregister_widget('WP_Widget_Search');
-	  unregister_widget('WP_Widget_Text');
-	  unregister_widget('WP_Widget_Categories');
-	  unregister_widget('WP_Widget_Recent_Posts');
-	  unregister_widget('WP_Widget_Recent_Comments');
-	  unregister_widget('WP_Widget_RSS');
-	  unregister_widget('WP_Widget_Tag_Cloud');
-	  unregister_widget('WP_Nav_Menu_Widget');
+		unregister_widget('WP_Widget_Pages');
+		unregister_widget('WP_Widget_Calendar');
+		unregister_widget('WP_Widget_Archives');
+		unregister_widget('WP_Widget_Links');
+		unregister_widget('WP_Widget_Meta');
+		unregister_widget('WP_Widget_Search');
+		unregister_widget('WP_Widget_Text');
+		unregister_widget('WP_Widget_Categories');
+		unregister_widget('WP_Widget_Recent_Posts');
+		unregister_widget('WP_Widget_Recent_Comments');
+		unregister_widget('WP_Widget_RSS');
+		unregister_widget('WP_Widget_Tag_Cloud');
+		unregister_widget('WP_Nav_Menu_Widget');
 	}
 
 	add_action( 'widgets_init', 'jpb_unregister_widgets' );

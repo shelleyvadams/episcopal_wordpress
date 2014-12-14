@@ -1,12 +1,12 @@
 /*
- Theme Name: Episcopal Design Two - Teal
- Theme URI: https://github.com/shelleyvadams/episcopal_wordpress
- Description: Teal Episcopal Church theme. Version 1.0 by John Balnaves (http://johnbalnaves.com)
- Version: 1.1
- Author: Shelley V. Adams
- Author URI: http://shelleyvadams.github.io/
- Template: designtwo
- Tags: teal, stained glass, Episcopal Church
+ Theme Name:   Episcopal Design Two - Teal
+ Theme URI:    https://github.com/shelleyvadams/episcopal_wordpress/tree/master/designtwo_teal
+ Description:  Teal Episcopal Church theme. Version 1.0 by John Balnaves (http://johnbalnaves.com)
+ Version:      1.1
+ Author:       Shelley V. Adams
+ Author URI:   http://shelleyvadams.github.io/
+ Template:     designtwo
+ Tags:         teal, stained glass, Episcopal Church
 */
 
 /*
@@ -14,104 +14,99 @@
  Most rules apply colors and images (as urls are relative to the stylesheet location), everything else has been handled by the parent theme.
 */
 
-div.main-border, /* Header */
-div.main-border-bottom {
-  background:url('img/border.png');
-}
+div.main-border,
+div.main-border-bottom { background:url('img/border.png'); }
 
 article.rss-post {
-  width:46.35%;
-  padding:20px;
-  margin-left:25px;
+	width:46.35%;
+	padding:20px;
+	margin-left:25px;
 }
 
-/* sidebar - parish leaders */
 div.sidebar-contents p.button a:hover,
-div.sidebar-contents p.button a:active {
-  border-style:none;
-}
+div.sidebar-contents p.button a:active { border-style:none; }
+
+/* #fff is white */
 
 nav ul li a:link,
 nav ul li a:visited {
-  color:#fff;
-  border-left-color:#fff;
+	color:#fff;
+	border-left-color:#fff;
 }
 
-h3, /* Main Content */
-article.main-post, /* Home Page Posts */
-article.rss-post {
-  background-color:#332a86;
-}
+/* #332a86 is Pantone 2685, purple from the secondary color palette */
 
+h3,
+article.main-post,
+article.rss-post { background-color:#332a86; }
 
-div.sidebar-contents p, /* Side Bar */
-div.service-times-wrapper, /* sidebar - service times */
-div.widget_simplesubscribe {/* sidebar - subscribe */
-  border-bottom-color:#332a86;
-}
+div.sidebar-contents p,
+div.service-times-wrapper,
+div.widget_simplesubscribe { border-bottom-color:#332a86; }
 
-/* Home Page: video */
-article.video-post iframe {
-  border-color:#332a86;
-}
+article.video-post iframe { border-color:#332a86; }
 
-span.times {
-  color:#332a86;
-}
+span.times { color:#332a86; }
+
+/* #37bdb2 is Pantone 3265, teal from the secondary color palette */
 
 div.main-wrapper {
-  background-image:url('img/background.png');
-  background-color:#35bdb2;
+	background-image:url('img/background.png');
+	background-color:#37bdb2;
 }
 
-article.main-post img {
-  border-color:#35bdb2;
-}
+article.main-post img { border-color:#37bdb2; }
 
-a:link, a:visited,
+a:link,
+a:visited,
 nav ul li a:hover,
 nav ul li a:active,
 nav ul li.current_page_item a,
 nav ul li.current_page_parent a,
-article.main-post, /* Home Page Posts */
-section.parish-leaders h4, /* Contacts Page */
+article.main-post,
+section.parish-leaders h4,
 section.video h4,
-h4.article-header {/* Single Post*/
-  color:#35bdb2;
+h4.article-header { color:#37bdb2; }
+
+/* #028a7f is dark teal */
+
+footer {
+	background:-webkit-linear-gradient(#028a7f,#37bdb2);
+	background:-o-linear-gradient(#028a7f,#37bdb2);
+	background:-moz-linear-gradient(#028a7f,#37bdb2);
+	background:linear-gradient(#028a7f,#37bdb2);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#028a7f',endColorstr='#37bdb2',GradientType=0);
 }
 
-/* Footer */
-footer {
-  background:-webkit-linear-gradient(#028a7f,#35bdb2); /* For Safari 5.1 to 6.0 */
-  background:-o-linear-gradient(#028a7f,#35bdb2); /* For Opera 11.1 to 12.0 */
-  background:-moz-linear-gradient(#028a7f,#35bdb2); /* For Firefox 3.6 to 15 */
-  background:linear-gradient(#028a7f,#35bdb2); /* Standard syntax */
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#028a7f',endColorstr='#35bdb2',GradientType=0); /* IE6-9 */
-}
+
+/* #241d5e is dark purple */
 
 input[type=submit],
 div.sidebar-contents p.button {
-  background:-webkit-linear-gradient(#332a86,#241d5e); /* For Safari 5.1 to 6.0 */
-  background:-o-linear-gradient(#332a86,#241d5e); /* For Opera 11.1 to 12.0 */
-  background:-moz-linear-gradient(#332a86,#241d5e); /* For Firefox 3.6 to 15 */
-  background:linear-gradient(#332a86,#241d5e); /* Standard syntax */
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#332a86',endColorstr='#241d5e',GradientType=0); /* IE6-9 */
+	background:-webkit-linear-gradient(#332a86,#241d5e);
+	background:-o-linear-gradient(#332a86,#241d5e);
+	background:-moz-linear-gradient(#332a86,#241d5e);
+	background:linear-gradient(#332a86,#241d5e);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#332a86',endColorstr='#241d5e',GradientType=0);
 }
 
-/* Navigation */
+/* #918cb8 is a lighter purple; #e3e3fd is pale purple */
+
 nav {
-  background:-webkit-linear-gradient(#918cb8,#e3e3fd); /* For Safari 5.1 to 6.0 */
-  background:-o-linear-gradient(#918cb8,#e3e3fd); /* For Opera 11.1 to 12.0 */
-  background:-moz-linear-gradient(#918cb8,#e3e3fd); /* For Firefox 3.6 to 15 */
-  background:linear-gradient(#918cb8,#e3e3fd); /* Standard syntax */
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#918cb8',endColorstr='#e3e3fd',GradientType=0); /* IE6-9 */
+	background:-webkit-linear-gradient(#918cb8,#e3e3fd);
+	background:-o-linear-gradient(#918cb8,#e3e3fd);
+	background:-moz-linear-gradient(#918cb8,#e3e3fd);
+	background:linear-gradient(#918cb8,#e3e3fd);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#918cb8',endColorstr='#e3e3fd',GradientType=0);
 }
+
+/* #c4ece8 is pale teal; #fff is white */
 
 section.parish-leaders h4,
 section.video h4 {
-  background:-webkit-linear-gradient(#c4ece8,#fff); /* For Safari 5.1 to 6.0 */
-  background:-o-linear-gradient(#c4ece8,#fff); /* For Opera 11.1 to 12.0 */
-  background:-moz-linear-gradient(#c4ece8,#fff); /* For Firefox 3.6 to 15 */
-  background:linear-gradient(#c4ece8,#fff); /* Standard syntax */
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c4ece8',endColorstr='#ffffff',GradientType=0); /* IE6-9 */
+	background:-webkit-linear-gradient(#c4ece8,#fff);
+	background:-o-linear-gradient(#c4ece8,#fff);
+	background:-moz-linear-gradient(#c4ece8,#fff);
+	background:linear-gradient(#c4ece8,#fff);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c4ece8',endColorstr='#ffffff',GradientType=0);
 }

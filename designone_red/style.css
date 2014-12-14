@@ -1,6 +1,6 @@
 /*
  Theme Name:   Episcopal Design One - Red
- Theme URI:    https://github.com/shelleyvadams/episcopal_wordpress
+ Theme URI:    https://github.com/shelleyvadams/episcopal_wordpress/tree/master/designone_red
  Description:  Red Episcopal Church theme. Version 1.0 by John Balnaves (http://johnbalnaves.com)
  Version:      1.1
  Author:       Shelley V. Adams
@@ -14,48 +14,46 @@
  Only change colors and images (as urls are relative to the stylesheet location), everything else has been handled by the parent theme.
 */
 
-header, /* Header */
-h4.banner, /* Contacts Page */
-nav h2 { /* Side Bar */
-  background-image:url('img/header.jpg');
-}
+header,
+h4.banner,
+nav h2 { background-image:url('img/header.jpg'); }
 
-div.main-border {
-  background-image:url('img/border.png');
-}
+div.main-border { background-image:url('img/border.png'); }
 
-footer, /* Footer */
-div.menu-primary-navigation-container {
-  background-color:#d11342;
-}
+/* #d11242 is Pantone Red 193 from the primary color palette */
 
-a:link, a:visited, 
-nav a:hover, nav a:active, 
-li.current_page_item a, 
-article.other-post h4, /* Home Page Posts */
-article.main-post h4,
-article.main-post a:link, 
-article.main-post a:visited, 
-article.second-posts h4, 
-article.rss-post, 
-h4.article-header, /* Single Post*/
-a.more-link:link, 
-a.more-link:visited, /* sidebar - about */
-span.times {
-  color:#d11342;
-}
+footer,
+div.menu-primary-navigation-container { background-color:#d11242; }
 
-h2.sidebar, 
+h2.sidebar,
 h2.widgettitle {
-  border-top-color:#d11342;
-  border-bottom-color:#d11342;
+	border-top-color:#d11242;
+	border-bottom-color:#d11242;
 }
 
-input[type=submit], /* sidebar - subscribe */
-div.sidebar-contents p.button { /* sidebar - parish leaders */
-  background:-webkit-linear-gradient(#cf1543,#910d2c); /* For Safari 5.1 to 6.0 */
-  background:-o-linear-gradient(#cf1543,#910d2c); /* For Opera 11.1 to 12.0 */
-  background:-moz-linear-gradient(#cf1543,#910d2c); /* For Firefox 3.6 to 15 */
-  background:linear-gradient(#cf1543,#910d2c); /* Standard syntax */
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cf1543',endColorstr='#910d2c',GradientType=0); /* IE6-9 */
+a:link,
+a:visited,
+nav a:hover,
+nav a:active,
+li.current_page_item a,
+article.other-post h4,
+article.main-post h4,
+article.main-post a:link,
+article.main-post a:visited,
+article.second-posts h4,
+article.rss-post,
+h4.article-header,
+a.more-link:link,
+a.more-link:visited,
+span.times { color:#d11242; }
+
+/* #910d2c is dark red */
+
+input[type=submit],
+div.sidebar-contents p.button {
+	background:-webkit-linear-gradient(#d11242,#910d2c);
+	background:-o-linear-gradient(#d11242,#910d2c);
+	background:-moz-linear-gradient(#d11242,#910d2c);
+	background:linear-gradient(#d11242,#910d2c);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d11242',endColorstr='#910d2c',GradientType=0);
 }

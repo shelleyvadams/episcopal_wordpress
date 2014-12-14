@@ -1,12 +1,12 @@
 /*
- Theme Name: Episcopal Design Two - Purple
- Theme URI: https://github.com/shelleyvadams/episcopal_wordpress
- Description: Purple Episcopal Church theme. Version 1.0 by John Balnaves (http://johnbalnaves.com)
- Version: 1.1
- Author: Shelley V. Adams
- Author URI: http://shelleyvadams.github.io/
- Template: designtwo
- Tags: purple, stained glass, Episcopal Church
+ Theme Name:   Episcopal Design Two - Purple
+ Theme URI:    https://github.com/shelleyvadams/episcopal_wordpress/tree/master/designtwo_purple
+ Description:  Purple Episcopal Church theme. Version 1.0 by John Balnaves (http://johnbalnaves.com)
+ Version:      1.1
+ Author:       Shelley V. Adams
+ Author URI:   http://shelleyvadams.github.io/
+ Template:     designtwo
+ Tags:         purple, stained glass, Episcopal Church
 */
 
 /*
@@ -14,103 +14,96 @@
  Most rules apply colors and images (as urls are relative to the stylesheet location), everything else has been handled by the parent theme.
 */
 
-div.main-border, /* Header */
-div.main-border-bottom {
-  background-image:url('img/border.png');
-}
+div.main-border,
+div.main-border-bottom { background-image:url('img/border.png'); }
 
 article.rss-post {
-  width:46.35%;
-  margin-left:25px;
-  padding:25px;
+	width:46.35%;
+	margin-left:25px;
+	padding:25px;
 }
 
 div.sidebar-contents p.button a:hover,
-div.sidebar-contents p.button a:active {
-  border-style:none;
-}
+div.sidebar-contents p.button a:active { border-style:none; }
 
-h4.article-header, /* Single Post*/
-span.times,
-a.more-link:link, a.more-link:visited {/* sidebar - parish leaders */
-  color:#322983;
-}
+/* #332a86 is Pantone 2685, purple from the secondary color palette */
 
-/* Footer */
 footer {
-  background-image:none;
-  background-color:#332a86;
+	background-image:none;
+	background-color:#332a86;
 }
 
-article.main-post img {
-  border-color:#332a86;
-}
+article.main-post img { border-color:#332a86; }
 
-a:link, a:visited,
+span.times,
+a:link,
+a:visited,
+a.more-link:link,
+a.more-link:visited,
 nav li,
-article.main-post, /* Home Page Posts */
+article.main-post,
 nav ul li a:link,
 nav ul li a:visited,
 nav ul li a:hover,
 nav ul li a:active,
 nav ul li.current_page_item a,
 nav ul li.current_page_parent a,
+h4.article-header,
 section.parish-leaders h4,
-section.video h4 {
-  color:#332a86;
-}
+section.video h4 { color:#332a86; }
+
+/* #7069aa is light purple */
 
 div.main-wrapper {
-  background-image:url('img/background.png');
-  background-color:#7069aa;
+	background-image:url('img/background.png');
+	background-color:#7069aa;
 }
+
+/* #8a7967 is Pantone Warm Gray 10 from the primary color palette. */
 
 nav ul li a:link,
-nav ul li a:visited {
-  border-left-color:#8a7967;
-}
+nav ul li a:visited { border-left-color:#8a7967; }
 
-h3, /* Main Content */
-article.main-post, /* Home Page Posts */
-article.rss-post {
-  background-color:#d5d10e;
-}
+/* #d5d10e is Pantone 397, gold from the secondary color palette */
 
-/* Home Page:video */
-article.video-post iframe {
-  border-color:#d5d10e;
-}
+h3,
+article.main-post,
+article.rss-post { background-color:#d5d10e; }
 
-div.sidebar-contents p, /* Side Bar */
-div.service-times-wrapper, /* sidebar - service times */
-div.widget_simplesubscribe {/* sidebar - subscribe */
-  border-bottom-color:#d5d10e;
-}
+article.video-post iframe { border-color:#d5d10e; }
+
+div.sidebar-contents p,
+div.service-times-wrapper,
+div.widget_simplesubscribe { border-bottom-color:#d5d10e; }
+
+/* #241d5e is dark purple */
 
 input[type=submit],
-div.sidebar-contents p.button {/* sidebar - parish leaders */
-  background:-webkit-linear-gradient(#332a86,#241d5e); /* For Safari 5.1 to 6.0 */
-  background:-o-linear-gradient(#332a86,#241d5e); /* For Opera 11.1 to 12.0 */
-  background:-moz-linear-gradient(#332a86,#241d5e); /* For Firefox 3.6 to 15 */
-  background:linear-gradient(#332a86,#241d5e); /* Standard syntax */
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#332a86',endColorstr='#241d5e',GradientType=0); /* IE6-9 */
+div.sidebar-contents p.button {
+	background:-webkit-linear-gradient(#332a86,#241d5e);
+	background:-o-linear-gradient(#332a86,#241d5e);
+	background:-moz-linear-gradient(#332a86,#241d5e);
+	background:linear-gradient(#332a86,#241d5e);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#332a86',endColorstr='#241d5e',GradientType=0);
 }
 
-/* Contacts Page */
+/* #c3c0db is an even lighter purple; #fff is white */
+
 section.parish-leaders h4,
 section.video h4 {
-  background:-webkit-linear-gradient(#c3c0db,#fff); /* For Safari 5.1 to 6.0 */
-  background:-o-linear-gradient(#c3c0db,#fff); /* For Opera 11.1 to 12.0 */
-  background:-moz-linear-gradient(#c3c0db,#fff); /* For Firefox 3.6 to 15 */
-  background:linear-gradient(#c3c0db,#fff); /* Standard syntax */
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c3c0db',endColorstr='#ffffff',GradientType=0); /* IE6-9 */
+	background:-webkit-linear-gradient(#c3c0db,#fff);
+	background:-o-linear-gradient(#c3c0db,#fff);
+	background:-moz-linear-gradient(#c3c0db,#fff);
+	background:linear-gradient(#c3c0db,#fff);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c3c0db',endColorstr='#ffffff',GradientType=0);
 }
 
-/* Navigation */
+/* #d4d15c is muted gold; #f1f0b3 is light gold */
+
 nav {
-  background:-webkit-linear-gradient(#d4d15c,#f1f0b3); /* For Safari 5.1 to 6.0 */
-  background:-o-linear-gradient(#d4d15c,#f1f0b3); /* For Opera 11.1 to 12.0 */
-  background:-moz-linear-gradient(#d4d15c,#f1f0b3); /* For Firefox 3.6 to 15 */
-  background:linear-gradient(#d4d15c,#f1f0b3); /* Standard syntax */
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d4d15c',endColorstr='#f1f0b3',GradientType=0); /* IE6-9 */
+	background:-webkit-linear-gradient(#d4d15c,#f1f0b3);
+	background:-o-linear-gradient(#d4d15c,#f1f0b3);
+	background:-moz-linear-gradient(#d4d15c,#f1f0b3);
+	background:linear-gradient(#d4d15c,#f1f0b3);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d4d15c',endColorstr='#f1f0b3',GradientType=0);
 }

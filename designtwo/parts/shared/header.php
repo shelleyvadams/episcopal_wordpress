@@ -8,7 +8,7 @@
 	<div class="main-border"></div>
 
 	<nav>
-		<?php wp_nav_menu( array( 
+		<?php wp_nav_menu( array(
 			'primary' => 'Primary Navigation',
 			'depth'   => 1,
 		) ); ?>

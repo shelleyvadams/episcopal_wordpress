@@ -1,11 +1,9 @@
-<aside>	
-
+<aside>
 	<div class="sidebar-contents">
-
 		<?php
 		$page = get_page_by_title( 'About' );
- 		$the_excerpt = $page->post_excerpt; 
- 		?>
+		$the_excerpt = $page->post_excerpt;
+		?>
 
 		<p><?php echo $the_excerpt ?>&nbsp;&nbsp;<a class="more-link" href="<?php echo get_permalink( get_page_by_path( 'about' ) ) ?>">More...</a></p>
 
@@ -17,7 +15,7 @@
 				'order'      => 'ASC');
 			?>
 
-			<?php		
+			<?php
 			global $services;
 			global $args;
 
@@ -25,7 +23,7 @@
 
 			if ( $the_query->have_posts() ): ?>
 
-				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
+				<?php while ( $the_query->have_posts() ) : $the_query->the_post();
 
 					$times = (trim(get_post_meta($the_query->post->ID, '_ns_times', true)));
 				?>
@@ -51,7 +49,7 @@
 				'order'      => 'ASC');
 			?>
 
-			<?php		
+			<?php
 			global $bio;
 			global $args;
 
@@ -59,9 +57,9 @@
 
 			if ( $the_query->have_posts() ): ?>
 
-				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
+				<?php while ( $the_query->have_posts() ) : $the_query->the_post();
 
-					$number = (trim(get_post_meta($the_query->post->ID, '_ns_number', true))); 
+					$number = (trim(get_post_meta($the_query->post->ID, '_ns_number', true)));
 					$email = (trim(get_post_meta($the_query->post->ID, '_ns_email', true)));
 				?>
 					<article class="people-sidebar clearfix">

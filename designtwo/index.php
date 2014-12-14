@@ -5,13 +5,13 @@
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file 
+ * E.g., it puts together the home page when no home.php file
  *
  * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
  *
- * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
+ * @package     WordPress
+ * @subpackage  Starkers
+ * @since       Starkers 4.0
  */
 ?>
 
@@ -20,12 +20,12 @@
 	<?php include_once 'social-media.php'; ?>
 
 	<div class="section-wrapper clearfix">
-		 
+
 		<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/header' ) ); ?>
-		
+
 		<div class="wrap">
 			<section>
-				<?php $page = get_page_id('parish-news') ?> 
+				<?php $page = get_page_id('parish-news') ?>
 				<h3><?php echo get_the_title($page); ?></h3>
 
 				<div class="table-wrapper">
@@ -46,7 +46,7 @@
 					</table>
 
 					<div class="pag nav-next align-left"><?php previous_posts_link( '< Newer Posts', $the_query->max_num_pages ); ?></div>
-					<div class="pag nav-previous align-right"><?php next_posts_link( 'Older Posts >', $the_query->max_num_pages ); ?></div>	
+					<div class="pag nav-previous align-right"><?php next_posts_link( 'Older Posts >', $the_query->max_num_pages ); ?></div>
 				</div>
 			</section>
 		</div>

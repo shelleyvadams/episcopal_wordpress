@@ -5,8 +5,8 @@
 	<?php include_once 'social-media.php'; ?>
 
 	<div class="section-wrapper clearfix">
-		 
-		 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/header' ) ); ?>
+
+		<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/header' ) ); ?>
 
 		<div class="wrap">
 			<section>
@@ -17,13 +17,13 @@
 					'posts_per_page' => '6',
 					'order'      => 'DESC');
 				?>
-					
+
 					<?php $the_query = new WP_Query( $args ); ?>
 
 					<?php if ( $the_query->have_posts() ) : ?>
-						
+
 						<?php $countposts = 0; while ( $the_query->have_posts() ) : $the_query->the_post(); $countposts++; ?>
-							
+
 							<article class="other-post clearfix <?php if($countposts == 1) { ?>main-post<?php } ?><?php if($countposts == 2) { ?>second-posts<?php } ?><?php if($countposts == 3) { ?>second-posts<?php } ?>">
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 								<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>

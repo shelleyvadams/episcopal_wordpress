@@ -9,9 +9,9 @@
  *
  * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
  *
- * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
+ * @package     WordPress
+ * @subpackage  Starkers
+ * @since       Starkers 4.0
  */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header') ); ?>
@@ -19,8 +19,8 @@
 	<?php include_once 'social-media.php'; ?>
 
 	<div class="section-wrapper clearfix">
-		 
-		 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/header' ) ); ?>
+
+		<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/header' ) ); ?>
 		<div class="wrap">
 			<section>
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>

@@ -9,9 +9,9 @@
  *
  * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
  *
- * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
+ * @package     WordPress
+ * @subpackage  Starkers
+ * @since       Starkers 4.0
  */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
@@ -19,7 +19,7 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/navigation' ) ); ?>
 
 	<div class="section-wrapper clearfix">
-		
+
 		<section>
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<article class="regular-page"><?php the_content(); ?></article>
@@ -28,5 +28,5 @@
 		<?php include_once 'sidebar.php'; ?>
 	</div>
 
-	
+
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

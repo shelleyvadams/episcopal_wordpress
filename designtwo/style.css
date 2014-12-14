@@ -1,12 +1,14 @@
 /*
-Theme Name: 	Design Two - Orange
-Theme URI: 		http://viewportindustries.com/products/starkers
-Description: 	Episcopal Church Theme
-Version: 		1.0
-Author: 		John Balnaves
-Author URI: 	http://johnbalnaves.com
-Tags: 			Blog, News
+ Theme Name:   Episcopal Design Two - Orange
+ Theme URI:    https://github.com/shelleyvadams/episcopal_wordpress/tree/master/designtwo
+ Description:  Orange Episcopal Church Theme. Version 1.0 by John Balnaves (http://johnbalnaves.com)
+ Version:      1.1
+ Author:       Shelley V. Adams
+ Author URI:   http://shelleyvadams.github.io/
+ Tags:         orange, stained glass, Episcopal Church
 */
+
+
 
 /*
 ===========================
@@ -14,637 +16,631 @@ CONTENTS:
 
 01 Sensible defaults
 02 Typography
-03 Author Styles 
-04 Media queries 
+03 Author Styles
+04 Media queries
 ===========================
 */
 
-/* ---------------------------------------------------------------------------------------------------------- 
+
+
+/* ----------------------------------------------------------------------------------------------------------
 01 Sensible defaults ----------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
 
 @import "css/reset.css";
 
+/* For absolutely positioning elements within containers (add more to the list if need be) */
 div,
 article,
 section,
 header,
 footer,
 nav,
-li					{ position:relative; /* For absolutely positioning elements within containers (add more to the list if need be) */ }
-.group:after 		{ display:block; height:0; clear:both; content:"."; visibility:hidden; /* For clearing */ }
-body 				{ background:#fff; /* Don't forget to style your body to avoid user overrides */ }
-::-moz-selection 	{ background:#ff0; color:#333; }
-::selection 		{ background:#ff0; color:#333; }
+li { position:relative; }
+
+/* For clearing */
+.group:after {
+	display:block;
+	height:0;
+	clear:both;
+	content:".";
+	visibility:hidden;
+}
+
+/* Don't forget to style your body to avoid user overrides */
+body { background:#fff; }
+
+::-moz-selection,
+::selection {
+	background:#ff0;
+	color:#333;
+}
 
 /* apply a natural box layout model to all elements, but allowing components to change */
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+html { box-sizing:border-box; }
+
+*,
+*:before,
+*:after { box-sizing:inherit; }
 
 /* Clear Fixing */
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+	content:" ";
+	display:table;
 }
 
-.clearfix:after {
-    clear: both;
-}
+.clearfix:after { clear:both; }
 
-/* ---------------------------------------------------------------------------------------------------------- 
+
+
+/* ----------------------------------------------------------------------------------------------------------
 02 Typography -----------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
+
 /*
+14 / 16	= 0.875em     (14px equivalent)
+16 / 16	= 1em         (16px equivalent)
+18 / 16 = 1.125em     (18px equivalent)
+21 / 16 = 1.3125em    (21px equivalent)
+24 / 16 = 1.5em       (24px equivalent)
+30 / 16 = 1.875em     (30px equivalent)
 
-14 / 16	= 		0.875em 		(14px equivalent)
-16 / 16	= 		1em 			(16px equivalent)
-18 / 16 = 		1.125em 		(18px equivalent)
-21 / 16 = 		1.3125em 		(21px equivalent)
-24 / 16 = 		1.5em 			(24px equivalent)
-30 / 16 = 		1.875em 		(30px equivalent)
-
+We strongly recommend you declare font-weight using numerical values, but check to see which weights you're exporting first
 */
 
-body,
-input,
-textarea 			{ /* We strongly recommend you declare font-weight using numerical values, but check to see which weights you're exporting first */ }
+/* This helps to identify headings at the initial build stage, but you should write something more precise later on */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-weight:bold; }
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6 					{ font-weight:bold; /* This helps to identify headings at the initial build stage, but you should write something more precise later on */ }
 
-/* ---------------------------------------------------------------------------------------------------------- 
+
+/* ----------------------------------------------------------------------------------------------------------
 03 Authors Styles -------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
 
+/*
+ Colors:
+ #000 is black
+ #044c7d is dark blue
+ #036cb6 is Pantone Blue 660 from the primary color palette
+ #60a2d1 is light blue
+ #777 is gray
+ #8a7967 is Pantone Warm Gray 10 from the primary color palette
+ #c8e6fa is pale blue
+ #f8971d is Pantone 144, orange from the secondary color palette
+ #fadeb9 is pale orange
+ #fff is white
+*/
+
 body {
-	background: #777;
-	font-family: "Times New Roman", Times, serif;
+	background:#777;
+	font-family:"Times New Roman",Times,serif;
 	font-smoothing:antialiased;
 	-webkit-font-smoothing:antialiased;
-	color: #877665;
+	color:#8a7967;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Arial Narrow', sans-serif;
-	text-transform: uppercase;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family:'Arial Narrow',sans-serif;
+	text-transform:uppercase;
 }
 
 div.main-wrapper {
-	background: url('img/background.png') no-repeat #f8971d;
-	width: 960px;
-	margin: 0 auto;
+	background:url('img/background.png') no-repeat #f8971d;
+	width:960px;
+	margin:0 auto;
 }
 
 div.section-wrapper {
-	width: 715px;
-	float: left;
+	width:715px;
+	float:left;
 }
 
 aside {
-	width: 245px;
-	float: right;
-	margin-top: 86px;
+	width:245px;
+	float:right;
+	margin-top:86px;
 }
 
-a:link, a:visited {
-	color: #f59520;
-	text-decoration: none;
+a:link,
+a:visited {
+	color:#f8971d;
+	text-decoration:none;
 }
 
-a:hover, a:active {
-	text-decoration: underline;
-}
+a:hover,
+a:active { text-decoration:underline; }
 
 /* Header */
 div.simple-social-icons {
-	padding-top: 10px;
-	padding-left: 5px;
+	padding-top:10px;
+	padding-left:5px;
 }
 
 h1 {
-	margin-top: 25px;
-	margin-left: 10px;
-	text-transform: uppercase;
-	font-size: 24px;
-	color: #fff;
+	margin-top:25px;
+	margin-left:10px;
+	text-transform:uppercase;
+	font-size:24px;
+	color:#fff;
 }
 
-h1 a:link, h1 a:visited {
-	color: #fff;
-	text-decoration: none;
+h1 a:link,
+h1 a:visited {
+	color:#fff;
+	text-decoration:none;
 }
 
 div.slide-show {
-	margin-top: 25px;
-	-webkit-box-shadow: 8px -8px 2px -2px #000;
-    box-shadow: 5px -5px 30px -8px #000;
+	margin-top:25px;
+	-webkit-box-shadow:8px -8px 2px -2px #000;
+	box-shadow:5px -5px 30px -8px #000;
 }
 
-div.slide-show img{
-	width: 100%;
-}
+div.slide-show img{ width:100%; }
 
 div.main-border {
-	background: url('img/border.png');
-	height: 8px;
+	background:url('img/border.png');
+	height:8px;
 }
 
 div.main-border-bottom {
-	background: url('img/border.png');
-	height: 8px;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+	background:url('img/border.png');
+	height:8px;
+	position:absolute;
+	bottom:0;
+	width:100%;
 }
 
 /* Navigation */
 nav {
-	width: 715px;
-	background: -webkit-linear-gradient(#639ecf, #c8e6fa); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#639ecf, #c8e6fa); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#639ecf, #c8e6fa); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#639ecf, #c8e6fa); /* Standard syntax */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#639ecf', endColorstr='#c8e6fa',GradientType=0 ); /* IE6-9 */
-	display: table;
+	width:715px;
+	background:-webkit-linear-gradient(#60a2d1,#c8e6fa); /* For Safari 5.1 to 6.0 */
+	background:-o-linear-gradient(#60a2d1,#c8e6fa); /* For Opera 11.1 to 12.0 */
+	background:-moz-linear-gradient(#60a2d1,#c8e6fa); /* For Firefox 3.6 to 15 */
+	background:linear-gradient(#60a2d1,#c8e6fa); /* Standard syntax */
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#60a2d1',endColorstr='#c8e6fa',GradientType=0); /* IE6-9 */
+	display:table;
 }
 
 nav li {
-	display: inline-block;
-	color: #046fb3;	
-	margin-right: -4px;
+	display:inline-block;
+	color:#036cb6;
+	margin-right:-4px;
 }
 
-nav ul li a:link, 
+nav ul li a:link,
 nav ul li a:visited {
-	color: #046fb3;
-	padding: 0px 6.9px;
-	text-align: center;
-	font-size: 16px;
-	text-decoration: none;
-	display: block;
-	text-transform: uppercase;
-	border-left: 1px solid #60a2d1;
-	line-height: 50px;
-	font-weight: bold;
+	color:#036cb6;
+	padding:0 6.9px;
+	text-align:center;
+	font-size:16px;
+	text-decoration:none;
+	display:block;
+	text-transform:uppercase;
+	border-left:1px solid #60a2d1;
+	line-height:50px;
+	font-weight:bold;
 }
 
-nav ul li a:hover, 
+nav ul li a:hover,
 nav ul li a:active {
-	color: #f59520;
-	background: #fff;
+	color:#f8971d;
+	background:#fff;
 }
 
-nav ul li.current_page_item a, 
+nav ul li.current_page_item a,
 nav ul li.current_page_parent a {
-	color: #f59520;
-	background: #fff;
+	color:#f8971d;
+	background:#fff;
 }
 
-nav ul li:first-child a {
-	border-left: 0;
-}
+nav ul li:first-child a { border-left:0; }
 
 /* Main Content */
 div.wrap {
-	min-height: 1200px;
-	width: 715px;
-	padding-bottom: 25px;
-	float: left;
-	background-color: #fff;
+	min-height:1200px;
+	width:715px;
+	padding-bottom:25px;
+	float:left;
+	background-color:#fff;
 }
 
 section {
-	width: 715px;
-	padding-bottom: 25px;
+	width:715px;
+	padding-bottom:25px;
 }
 
 h3 {
-	background: #056cb5;
-	padding: 30px 30px;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 20px;
+	background:#036cb6;
+	padding:30px;
+	color:#fff;
+	text-transform:uppercase;
+	font-size:20px;
 }
 
-article.regular-page {
-	padding: 25px 25px 0 25px;
-}
+article.regular-page { padding:25px 25px 0 25px; }
 
 /* Home Page Posts */
-div.home-wrapper {
-	padding-right: 25px;
-}
+div.home-wrapper { padding-right:25px; }
 
 article.other-post {
-	display: inline-block;
-	width: 32.3%;
-	padding: 25px 0px 0px 25px;
-	color: #877665;
-	vertical-align: top;
+	display:inline-block;
+	width:32.3%;
+	padding:25px 0 0 25px;
+	color:#8a7967;
+	vertical-align:top;
 }
 
-article.other-post p {
-	margin-top: 10px;
-}
+article.other-post p { margin-top:10px; }
 
 article.other-post img {
-	width: 150px;
-	height: 150px;
-	margin-bottom: 10px;
-	/*border: 3px solid #056cb5;*/
+	width:150px;
+	height:150px;
+	margin-bottom:10px;
 }
 
 article.main-post {
-	background-color: #056cb5;
-	color: #f59520;
-	width: 715px;
-	padding: 50px 25px;
-	font-size: 18px;
+	background-color:#036cb6;
+	color:#f8971d;
+	width:715px;
+	padding:50px 25px;
+	font-size:18px;
 }
 
 article.main-post img {
-	width: 250px;
-	height: 250px;
-	float: left;
-	margin-top: 0px;
-	margin-right: 15px;
-	margin-bottom: 0px;
-	border: 3px solid #f8971d;
+	width:250px;
+	height:250px;
+	float:left;
+	margin-top:0;
+	margin-right:15px;
+	margin-bottom:0;
+	border:3px solid #f8971d;
 }
 
-article.main-post a:link, 
+article.main-post a:link,
 article.main-post a:visited {
-	color: #fff;
-	font-size: 40px;
+	color:#fff;
+	font-size:40px;
 }
 
-article.main-post a:hover, 
-article.main-post a:active {
-	text-decoration: underline;
+article.main-post a:hover,
+article.main-post a:active { text-decoration:underline; }
+
+article.second-posts {
+	width:49.1%;
+	display:inline-block;
 }
 
-article.second-posts {	
-	width: 49.1%;
-	display: inline-block;
-}
-
-article.second-posts h4 {
-	font-size: 22px;
-}
+article.second-posts h4 { font-size:22px; }
 
 article.second-posts img {
-	float: none;
-	width: 200px;
-	height: 200px;
-	margin-bottom: 10px;
+	float:none;
+	width:200px;
+	height:200px;
+	margin-bottom:10px;
 }
 
-/* Home Page: video */
+/* Home Page:video */
 span.lowercase {
-	font-style: italic;
-	text-transform: lowercase;
+	font-style:italic;
+	text-transform:lowercase;
 }
-article.video-post {
-	padding: 0px 0 25px 25px;
-}
-article.video-post iframe {
-	border: 10px solid #056cb5;
-}
+
+article.video-post { padding:0 0 25px 25px; }
+
+article.video-post iframe { border:10px solid #036cb6; }
 
 article.rss-post {
-	float: left;
-	width: 49%;
-	padding-left: 25px;
-
+	float:left;
+	width:49%;
+	padding-left:25px;
 }
 
 /* About */
 span.letter {
-	font-size: 70px;
-	float: left;
-	margin-right: 10px;
-	margin-bottom: -20px;
-	position: relative;
-	top: -10px;
+	font-size:70px;
+	float:left;
+	margin-right:10px;
+	margin-bottom:-20px;
+	position:relative;
+	top:-10px;
 }
 
 /* Parish News */
-div.table-wrapper {
-	padding: 15px;
-}
+div.table-wrapper { padding:15px; }
 
-table.posts-table , tbody, tr {
-	width: 100%;
-}
+table.posts-table,
+tbody,
+tr { width:100%; }
 
-th, td {
-	padding: 10px;
-}
+th,
+td { padding:10px; }
 
 th {
-	text-align: left;
-	padding-bottom: 10px;
+	text-align:left;
+	padding-bottom:10px;
 }
 
-td.date {
-	width: 115px;
-}
+td.date { width:115px; }
 
-th.author, td.author {
-	text-align: right;
-}
+th.author,
+td.author { text-align:right; }
 
 article.post-article {
-	padding: 25px;
-	color: #877665;
+	padding:25px;
+	color:#8a7967;
 }
 
 div.align-left {
-	float: left;
-	margin-top: 50px;
-	margin-left: 20px;
+	float:left;
+	margin-top:50px;
+	margin-left:20px;
 }
 
 div.align-right {
-	float: right;
-	margin-top: 50px;
-	margin-right: 20px;
+	float:right;
+	margin-top:50px;
+	margin-right:20px;
 }
 
 /* Contacts Page */
-section.contact {
-	height: 200px;
-}
-article.address {
-	padding: 25px 25px 0 25px;
-}
+section.contact { height:200px; }
+
+article.address { padding:25px 25px 0; }
 
 article.address p {
-	float: left;
-	width: 250px;
-	color: #877665;
-	margin: 0;
+	float:left;
+	width:250px;
+	color:#8a7967;
+	margin:0;
 }
 
 article.address iframe {
-	float: right;
-	width: 400px;
-	height: 300px;
+	float:right;
+	width:400px;
+	height:300px;
 }
 
-section.parish-leaders h4, 
+section.parish-leaders h4,
 section.video h4 {
-	padding: 20px 0 40px 0;
-	text-align: center;
-	width: 715px;
-	color: #f8971d;
-	font-family: "Times New Roman", Times, serif;
-	font-size: 20px;
-	background: -webkit-linear-gradient(#fadeb9, #fff); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#fadeb9, #fff); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#fadeb9, #fff); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#fadeb9, #fff); /* Standard syntax */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fadeb9', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	padding:20px 0 40px;
+	text-align:center;
+	width:715px;
+	color:#f8971d;
+	font-family:"Times New Roman",Times,serif;
+	font-size:20px;
+	background:-webkit-linear-gradient(#fadeb9,#fff); /* For Safari 5.1 to 6.0 */
+	background:-o-linear-gradient(#fadeb9,#fff); /* For Opera 11.1 to 12.0 */
+	background:-moz-linear-gradient(#fadeb9,#fff); /* For Firefox 3.6 to 15 */
+	background:linear-gradient(#fadeb9,#fff); /* Standard syntax */
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fadeb9',endColorstr='#ffffff',GradientType=0); /* IE6-9 */
 }
 
 article.person {
-	width: 33%;
-	float: left;
-	padding-left: 25px;
+	width:33%;
+	float:left;
+	padding-left:25px;
 }
 
 article.person img {
-	width: 100%;
-	height: auto;
+	width:100%;
+	height:auto;
 }
 
 article.person ul {
-	margin: 10px 0 50px 0;
-	color: #877665;
+	margin:10px 0 50px;
+	color:#8a7967;
 }
 
-article.person ul a {
-	color: #877665;
-}
+article.person ul a { color:#8a7967; }
 
 /* Single Post*/
 article.post-article img {
-	float: left;
-	width: 200px;
-	height: 200px;
-	margin-top: 3px;
-	margin-right: 15px;
-	margin-bottom: 5px;
+	float:left;
+	width:200px;
+	height:200px;
+	margin-top:3px;
+	margin-right:15px;
+	margin-bottom:5px;
 }
 
 h4.article-header {
-	color: #f8971d;
-	font-size: 18px; 
+	color:#f8971d;
+	font-size:18px;
 }
 
 p.article-info {
-	margin-top: 5px;
-	margin-bottom: 25px;
-	font-size: 14px;
+	margin-top:5px;
+	margin-bottom:25px;
+	font-size:14px;
 }
 
 /* Side Bar */
 div.sidebar-contents {
-	padding: 10px 10px 0px 20px;
-	color: #fff;
+	padding:10px 10px 0 20px;
+	color:#fff;
 }
 
-div.sidebar-images {
-	margin-top: 65px;
-}
+div.sidebar-images { margin-top:65px; }
 
 img.logo {
-	position: absolute;
-	top: -65px;
-	left: 55px;
-	z-index: 1;
+	position:absolute;
+	top:-65px;
+	left:55px;
+	z-index:1;
 }
 
 h2.welcome {
-	text-align: center;
-	text-transform: lowercase;
-	font-family: "Times New Roman", Times, serif;
-	font-style: italic;
-	margin-top: 30px;
-	margin-bottom: 25px;
-	font-size: 24px;
-	color: #fff;
+	text-align:center;
+	text-transform:lowercase;
+	font-family:"Times New Roman",Times,serif;
+	font-style:italic;
+	margin-top:30px;
+	margin-bottom:25px;
+	font-size:24px;
+	color:#fff;
 }
 
 div.sidebar-contents p {
-	padding-bottom: 35px;
-	border-bottom: 2px solid #056cb5;
-	margin-bottom: 0;
+	padding-bottom:35px;
+	border-bottom:2px solid #036cb6;
+	margin-bottom:0;
 }
 
-h2.sidebar, h2.widgettitle {
-	text-align: center;
-	text-transform: uppercase;
-	font-family: "Times New Roman", Times, serif;
-	margin-top: 10px;
-	margin-bottom: 25px;
-	font-size: 20px;
-	color: #fff;
+h2.sidebar,
+h2.widgettitle {
+	text-align:center;
+	text-transform:uppercase;
+	font-family:"Times New Roman",Times,serif;
+	margin-top:10px;
+	margin-bottom:25px;
+	font-size:20px;
+	color:#fff;
 }
 
 /* sidebar - service times */
 div.service-times-wrapper {
-	padding-bottom: 35px;
-	border-bottom: 2px solid #056cb5;
+	padding-bottom:35px;
+	border-bottom:2px solid #036cb6;
 }
 
 span.times {
-	color: #056cb5;
-	font-weight: normal;
-	font-size: 14px;
+	color:#036cb6;
+	font-weight:normal;
+	font-size:14px;
 }
 
 /* sidebar - subscribe */
 div.widget_simplesubscribe {
-	padding-bottom: 35px;
-	border-bottom: 2px solid #056cb5;
+	padding-bottom:35px;
+	border-bottom:2px solid #036cb6;
 }
 
-input {
-	width: 100%;
-}
+input { width:100%; }
 
 input[type=submit] {
-	border: none;
-	background: -webkit-linear-gradient(#046eb5, #044c7d); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#046eb5, #044c7d); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#046eb5, #044c7d); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#046eb5, #044c7d); /* Standard syntax */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#046eb5', endColorstr='#044c7d',GradientType=0 ); /* IE6-9 */
-	text-align: center;
-	padding: 0;
-	margin-top: 10px;
-	padding: 15px;
-	text-transform: uppercase;
-	color: #fff;
-	font-family: 'Arial Narrow', sans-serif;
-	letter-spacing: 1px;
+	border:none;
+	background:-webkit-linear-gradient(#036cb6,#044c7d); /* For Safari 5.1 to 6.0 */
+	background:-o-linear-gradient(#036cb6,#044c7d); /* For Opera 11.1 to 12.0 */
+	background:-moz-linear-gradient(#036cb6,#044c7d); /* For Firefox 3.6 to 15 */
+	background:linear-gradient(#036cb6,#044c7d); /* Standard syntax */
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#036cb6',endColorstr='#044c7d',GradientType=0); /* IE6-9 */
+	text-align:center;
+	padding:0;
+	margin-top:10px;
+	padding:15px;
+	text-transform:uppercase;
+	color:#fff;
+	font-family:'Arial Narrow',sans-serif;
+	letter-spacing:1px;
 }
 
 /* sidebar - parish leaders */
-div.parish-leaders-wrapper {
-	padding-bottom: 35px;
-}
+div.parish-leaders-wrapper { padding-bottom:35px; }
 
-article.people-sidebar {
-	padding: 5px 0;
-}
+article.people-sidebar { padding:5px 0; }
 
 article.people-sidebar img{
-	float: left;
-	width: 30%;
-	height: auto;
+	float:left;
+	width:30%;
+	height:auto;
 }
 
 article.people-sidebar ul {
-	float: left;
-	width: 70%;
-	font-size: 13px;
-	padding: 5px 0 0 10px;
+	float:left;
+	width:70%;
+	font-size:13px;
+	padding:5px 0 0 10px;
 }
 
-article.people-sidebar ul a{
-	color: #fff;
-}
+article.people-sidebar ul a{ color:#fff; }
 
 article.people-sidebar h4 {
-	font-style: italic;
-	font-family: "Times New Roman", Times, serif;
-	text-transform: none;
+	font-style:italic;
+	font-family:"Times New Roman",Times,serif;
+	text-transform:none;
 }
 
-a.more-link:link, a.more-link:visited {
-	color: #056cb5;
-	font-style: italic;
-	font-weight: bold;
+a.more-link:link,
+a.more-link:visited {
+	color:#036cb6;
+	font-style:italic;
+	font-weight:bold;
 }
 
 div.sidebar-contents p.button {
-	border-bottom: none;
-	background: -webkit-linear-gradient(#046eb5, #044c7d); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#046eb5, #044c7d); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#046eb5, #044c7d); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#046eb5, #044c7d); /* Standard syntax */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#046eb5', endColorstr='#044c7d',GradientType=0 ); /* IE6-9 */
-	text-align: center;
-	padding: 0;
-	font-weight: bold;
+	border-bottom:none;
+	background:-webkit-linear-gradient(#036cb6,#044c7d); /* For Safari 5.1 to 6.0 */
+	background:-o-linear-gradient(#036cb6,#044c7d); /* For Opera 11.1 to 12.0 */
+	background:-moz-linear-gradient(#036cb6,#044c7d); /* For Firefox 3.6 to 15 */
+	background:linear-gradient(#036cb6,#044c7d); /* Standard syntax */
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#036cb6',endColorstr='#044c7d',GradientType=0); /* IE6-9 */
+	text-align:center;
+	padding:0;
+	font-weight:bold;
 }
 
 div.sidebar-contents p.button a:link,
 div.sidebar-contents p.button a:visited {
-	padding: 15px 30px;
-	display: block;
-	text-decoration: none;
-	text-transform: uppercase;
-	color: #fff;
-	font-family: 'Arial Narrow', sans-serif;
+	padding:15px 30px;
+	display:block;
+	text-decoration:none;
+	text-transform:uppercase;
+	color:#fff;
+	font-family:'Arial Narrow',sans-serif;
 }
 
 div.sidebar-contents p.button a:hover,
-div.sidebar-contents p.button a:active {
-	border: 2px solid #fff;
-}
-
+div.sidebar-contents p.button a:active { border:2px solid #fff; }
 
 /* Footer */
 footer {
-	width: 100%;
-	height: 160px;
-	float: left;
-	background: -webkit-linear-gradient(#003980, #056cb5); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#003980, #056cb5); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#003980, #056cb5); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#003980, #056cb5); /* Standard syntax */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003980', endColorstr='#056cb5',GradientType=0 ); /* IE6-9 */
-	z-index: 1;
+	width:100%;
+	height:160px;
+	float:left;
+	background:-webkit-linear-gradient(#044c7d,#036cb6); /* For Safari 5.1 to 6.0 */
+	background:-o-linear-gradient(#044c7d,#036cb6); /* For Opera 11.1 to 12.0 */
+	background:-moz-linear-gradient(#044c7d,#036cb6); /* For Firefox 3.6 to 15 */
+	background:linear-gradient(#044c7d,#036cb6); /* Standard syntax */
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#044c7d',endColorstr='#036cb6',GradientType=0); /* IE6-9 */
+	z-index:1;
 }
+
 footer p {
-	margin: 0;
-	padding: 15px 0 0 20px;
-	color: #fff;
+	margin:0;
+	padding:15px 0 0 20px;
+	color:#fff;
 }
 
 footer img {
-	position: absolute;
-	top: 20px;
-	left: 411px;
+	position:absolute;
+	top:20px;
+	left:411px;
 }
 
 
-/* ---------------------------------------------------------------------------------------------------------- 
+
+/* ----------------------------------------------------------------------------------------------------------
 04 Media queries (using a mobile-first approach) ------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
 
 /* 400 and up */
 @media screen and (min-width:400px) {
-
-					{ /* Place your styles here for all widths greater than 400px */ }
-
+	/* Place your styles here for all widths greater than 400px */
 }
 
 /* Retina Display */
 @media screen and (-webkit-min-device-pixel-ratio:2) {
-
-					{ /* Place your styles here for all 'Retina' screens */ }
-
+	/* Place your styles here for all 'Retina' screens */
 }

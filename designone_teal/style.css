@@ -1,6 +1,6 @@
 /*
  Theme Name:   Episcopal Design One - Teal
- Theme URI:    https://github.com/shelleyvadams/episcopal_wordpress
+ Theme URI:    https://github.com/shelleyvadams/episcopal_wordpress/tree/master/designone_teal
  Description:  Teal Episcopal Church theme. Version 1.0 by John Balnaves (http://johnbalnaves.com)
  Version:      1.1
  Author:       Shelley V. Adams
@@ -14,74 +14,66 @@
  Only change colors and images (as urls are relative to the stylesheet location), everything else has been handled by the parent theme.
 */
 
-header, /* Header */
-h4.banner, /* Contacts Page */
-nav h2 { /* Side Bar */
-	background-image:url('img/header.jpg');
-}
+header,
+h4.banner,
+nav h2 { background-image:url('img/header.jpg'); }
 
-div.main-border {
-	background-image:url('img/border.png');
-}
+div.main-border { background-image:url('img/border.png'); }
 
-div.menu-primary-navigation-container, /* Navigation */
-h3 { /* Main Content */
-	background-color:#37bdb2;
-}
+/* #37bdb2 is Pantone 3265, teal from the secondary color palette */
 
-h2.sidebar, 
+h3,
+div.menu-primary-navigation-container { background-color:#37bdb2; }
+
+h2.sidebar,
 h2.widgettitle {
 	border-top-color:#37bdb2;
 	border-bottom-color:#37bdb2;
 }
 
-a:link, a:visited, 
-nav a:hover, nav a:active, 
-li.current_page_item a, 
-article.other-post h4, /* Home Page Posts */
-article.main-post h4, 
-article.main-post a:link, 
-article.main-post a:visited, 
-article.second-posts h4, 
-h4.article-header, /* Single Post*/
-a.more-link:link, /* sidebar - about */
-a.more-link:visited, 
-span.times { /* sidebar - service times */
-	color: #37bdb2;
-}
+a:link,
+a:visited,
+nav a:hover,
+nav a:active,
+li.current_page_item a,
+article.other-post h4,
+article.main-post h4,
+article.main-post a:link,
+article.main-post a:visited,
+article.second-posts h4,
+h4.article-header,
+a.more-link:link,
+a.more-link:visited,
+span.times { color:#37bdb2; }
 
-input[type=submit], /* sidebar - subscribe */
+/* #028a7f is dark teal */
+
+input[type=submit],
 div.sidebar-contents p.button {
-	background:-webkit-linear-gradient(#37bdaf,#26857b); /* For Safari 5.1 to 6.0 */
-	background:-o-linear-gradient(#37bdaf,#26857b); /* For Opera 11.1 to 12.0 */
-	background:-moz-linear-gradient(#37bdaf,#26857b); /* For Firefox 3.6 to 15 */
-	background:linear-gradient(#37bdaf,#26857b); /* Standard syntax */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#37bdaf',endColorstr='#26857b',GradientType=0); /* IE6-9 */
+	background:-webkit-linear-gradient(#37bdb2,#028a7f);
+	background:-o-linear-gradient(#37bdb2,#028a7f);
+	background:-moz-linear-gradient(#37bdb2,#028a7f);
+	background:linear-gradient(#37bdb2,#028a7f);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#37bdb2',endColorstr='#028a7f',GradientType=0);
 }
 
-/* Footer */
-footer {
-	background-color:#8a7867;
-}
+/* #8a7967 is Pantone Warm Gray 10 from the primary color palette. */
 
-aside, 
-h2.sidebar, 
-h2.widgettitle, 
-article.people-sidebar ul a { /* sidebar - parish leaders */
-	color: #8a7867;
-}
+footer { background-color:#8a7967; }
 
-div.section-wrapper, 
-article.rss-post {
-	background-color: #abcfc8;
-}
+aside,
+h2.sidebar,
+h2.widgettitle,
+article.people-sidebar ul a { color:#8a7967; }
 
-/* Home Page: video */
-article.video-post iframe {
-	border-color:#abcfc8;
-}
+/* #abcfc8 is a light, very muted teal */
 
-article.rss-post, 
-article.rss-post h2 a {
-	color: #fff;
-}
+div.section-wrapper,
+article.rss-post { background-color:#abcfc8; }
+
+article.video-post iframe { border-color:#abcfc8; }
+
+/* #fff is white */
+
+article.rss-post,
+article.rss-post h2 a { color:#fff; }
