@@ -1,14 +1,17 @@
 /*
- Theme Name:   Episcopal Design One - Blue
+ Theme Name:   Episcopal Design One
  Theme URI:    https://github.com/shelleyvadams/episcopal_wordpress/tree/master/designone
- Description:  Blue Episcopal Church Theme. Version 1.0 by John Balnaves (http://johnbalnaves.com)
+ Description:  Episcopal Church Theme with three color schemes. Version 1.0 by John Balnaves (http://johnbalnaves.com)
  Version:      1.1
  Author:       Shelley V. Adams
  Author URI:   http://shelleyvadams.github.io/
- Tags:         blue, stained glass, Episcopal Church
+ Tags:         blue, red, teal, stained glass, Episcopal Church, theme customizer
 */
 
 
+/*
+ Color scheme variations are located in the `css` subdirectory.
+*/
 
 /*
 ===========================
@@ -79,12 +82,12 @@ html { box-sizing:border-box; }
 ---------------------------------------------------------------------------------------------------------- */
 
 /*
-14 / 16	= 0.875em     (14px equivalent)
-16 / 16	= 1em         (16px equivalent)
-18 / 16 = 1.125em     (18px equivalent)
-21 / 16 = 1.3125em    (21px equivalent)
-24 / 16 = 1.5em       (24px equivalent)
-30 / 16 = 1.875em     (30px equivalent)
+14 / 16	= 0.875rem   (14px equivalent)
+16 / 16	= 1rem       (16px equivalent)
+18 / 16 = 1.125rem   (18px equivalent)
+21 / 16 = 1.3125rem  (21px equivalent)
+24 / 16 = 1.5rem     (24px equivalent)
+30 / 16 = 1.875rem   (30px equivalent)
 
 We strongly recommend you declare font-weight using numerical values, but check to see which weights you're exporting first
 */
@@ -105,8 +108,6 @@ h6 { font-weight:bold; }
 
 /*
  Colors:
- #044c7d is dark blue
- #036cb6 is Pantone Blue 660 from the primary color palette
  #777 is gray
  #888 is a slightly lighter gray
  #8a7967 is Pantone Warm Gray 10 from the primary color palette
@@ -141,16 +142,12 @@ div.main-wrapper {
 div.section-wrapper { background-color:#b8aea5; }
 
 a:link,
-a:visited {
-	color:#036cb6;
-	text-decoration:none;
-}
+a:visited { text-decoration:none; }
 
 a:hover,
 a:active { text-decoration:underline; }
 
 /* Header */
-header { background-image:url('img/header.jpg'); }
 
 div.simple-social-icons {
 	padding-top:10px;
@@ -182,10 +179,7 @@ img.logo {
 
 div.slide-show { height:auto; }
 
-div.main-border {
-	background:url('img/border.png');
-	height:8px;
-}
+div.main-border { height:8px; }
 
 /* Navigation */
 nav {
@@ -194,7 +188,6 @@ nav {
 }
 
 div.menu-primary-navigation-container {
-	background-color:#036cb6;
 	width:700px;
 	float:left;
 }
@@ -217,15 +210,9 @@ nav a:visited {
 }
 
 nav a:hover,
-nav a:active {
-	color:#036cb6;
-	background-color:#b8aea5;
-}
+nav a:active { background-color:#b8aea5; }
 
-li.current_page_item a {
-	color:#036cb6;
-	background-color:#dbd6d0;
-}
+li.current_page_item a { background-color:#dbd6d0; }
 
 /* Main Content */
 section {
@@ -239,7 +226,6 @@ section {
 }
 
 h3 {
-	background:#036cb6;
 	padding:30px;
 	text-transform:uppercase;
 	font-size:20px;
@@ -259,7 +245,6 @@ article.other-post {
 }
 
 article.other-post h4 {
-	color:#036cb6;
 	text-align:left;
 	margin-bottom:5px;
 }
@@ -280,7 +265,6 @@ article.main-post {
 }
 
 article.main-post h4{
-	color:#036cb6;
 	text-align:center;
 	margin-bottom:5px;
 }
@@ -295,10 +279,7 @@ article.main-post img {
 }
 
 article.main-post a:link,
-article.main-post a:visited {
-	color:#036cb6;
-	font-size:40px;
-}
+article.main-post a:visited { font-size:40px; }
 
 article.main-post a:hover,
 article.main-post a:active { text-decoration:underline; }
@@ -309,7 +290,6 @@ article.second-posts {
 }
 
 article.second-posts h4 {
-	color:#036cb6;
 	font-size:22px;
 	text-align:left;
 	margin-bottom:5px;
@@ -333,7 +313,6 @@ article.rss-post {
 	margin-left:25px;
 	background-color:#b8aea5;
 	padding:20px;
-	color:#036cb6;
 }
 
 /* About */
@@ -393,10 +372,7 @@ article.post-article img {
 	margin-bottom:5px;
 }
 
-h4.article-header {
-	color:#036cb6;
-	font-size:18px;
-}
+h4.article-header { font-size:18px; }
 
 p.article-info {
 	margin-top:5px;
@@ -430,7 +406,8 @@ h4.banner {
 	color:#fff;
 	font-family:'Arial Narrow',sans-serif;
 	font-size:20px;
-	background:url('img/header.jpg') no-repeat center center;
+	background-repeat:no-repeat;
+	background-position:center center;
 }
 
 article.person {
@@ -470,7 +447,8 @@ nav h2 {
 	font-size:25px;
 	color:#fff;
 	border-left:2px solid #b8aea5;
-	background:url('img/header.jpg') no-repeat center center;
+	background-repeat:no-repeat;
+	background-position:center center;
 }
 
 div.sidebar-contents p {
@@ -486,15 +464,14 @@ h2.widgettitle {
 	margin-bottom:25px;
 	font-size:20px;
 	color:#fff;
-	border-top:2px solid #036cb6;
-	border-bottom:2px solid #036cb6;
+	border-style:solid none;
+	border-width:2px 0;
 	padding:10px 0;
 }
 
 /* sidebar - about */
 a.more-link:link,
 a.more-link:visited {
-	color:#036cb6;
 	font-style:italic;
 	font-weight:bold;
 }
@@ -506,7 +483,6 @@ div.service-times-wrapper {
 }
 
 span.times {
-	color:#036cb6;
 	font-weight:normal;
 	font-size:14px;
 }
@@ -521,11 +497,6 @@ input { width:100%; }
 
 input[type=submit] {
 	border:none;
-	background:-webkit-linear-gradient(#036cb6,#044c7d);
-	background:-o-linear-gradient(#036cb6,#044c7d);
-	background:-moz-linear-gradient(#036cb6,#044c7d);
-	background:linear-gradient(#036cb6,#044c7d);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#036cb6',endColorstr='#044c7d',GradientType=0); /* IE6-9 */
 	text-align:center;
 	padding:0;
 	margin-top:10px;
@@ -566,11 +537,6 @@ article.people-sidebar h4 {
 
 div.sidebar-contents p.button {
 	border-bottom:none;
-	background:-webkit-linear-gradient(#036cb6,#044c7d); /* For Safari 5.1 to 6.0 */
-	background:-o-linear-gradient(#036cb6,#044c7d); /* For Opera 11.1 to 12.0 */
-	background:-moz-linear-gradient(#036cb6,#044c7d); /* For Firefox 3.6 to 15 */
-	background:linear-gradient(#036cb6,#044c7d); /* Standard syntax */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#036cb6',endColorstr='#044c7d',GradientType=0); /* IE6-9 */
 	text-align:center;
 	padding:0;
 	margin-top:10px;
@@ -590,7 +556,6 @@ div.sidebar-contents p.button a:visited {
 /* Footer */
 footer {
 	height:160px;
-	background-color:#036cb6;
 	z-index:1;
 }
 
