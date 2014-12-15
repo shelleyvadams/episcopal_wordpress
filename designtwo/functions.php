@@ -4,9 +4,8 @@
 	 *
 	 * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
 	 *
-	 * @package     WordPress
-	 * @subpackage  Starkers
-	 * @since       Starkers 4.0
+	 * @package     EpiscopalDesignTwo
+	 * @since       EpiscopalDesignTwo 1.1.0
 	 */
 
 	/* ========================================================================================================================
@@ -40,6 +39,66 @@
 
 	/* ========================================================================================================================
 
+	Theme Customizer
+
+	======================================================================================================================== */
+
+	/**
+	 * Registers options with the Theme Customizer
+	 *
+	 * @param      object    $wp_customize    The WordPress Theme Customizer
+	 * @package    EpiscopalDesignTwo
+	 * @since      1.1.0
+	 * @version    1.1.0
+	 */
+	function ed2_register_theme_customizer( $wp_customize ) {
+
+		/* Change Color Scheme */
+		$wp_customize->add_setting(
+			'ed2_color_scheme',
+			array(
+				'default'   => 'orange',
+				'transport' => 'postMessage'
+			)
+		);
+
+		$wp_customize->add_control(
+			'ed2_color_scheme',
+			array(
+				'section' => 'colors',
+				'label'   => 'Color Scheme',
+				'type'    => 'radio',
+				'choices' => array(
+					'orange' => 'Orange / Blue',
+					'purple'  => 'Purple / Gold',
+					'teal' => 'Teal / Purple'
+				)
+			)
+		);
+
+	} // end ed2_register_theme_customizer
+	add_action( 'customize_register', 'ed2_register_theme_customizer' );
+
+	/**
+	 * Registers the Theme Customizer Preview with WordPress.
+	 *
+	 * @package    EpiscopalDesignTwo
+	 * @since      1.1.0
+	 * @version    1.1.0
+	 */
+	function ed2_customizer_live_preview() {
+		wp_enqueue_script(
+			'ed2-theme-customizer',
+			get_template_directory_uri() . '/js/theme-customizer.js',
+			array( 'jquery', 'customize-preview' ),
+			'1.0.0',
+			true
+		);
+	} // end ed2_customizer_live_preview
+	add_action( 'customize_preview_init', 'ed2_customizer_live_preview' );
+
+	/* ========================================================================================================================
+
 	Actions and Filters
 
 	======================================================================================================================== */
@@ -68,15 +127,27 @@
 	 * Add scripts via wp_head()
 	 *
 	 * @return void
-	 * @author Keir Whitaker
+	 * @author Shelley V. Adams
 	 */
 
 	function starkers_script_enqueuer() {
 		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ) );
 		wp_enqueue_script( 'site' );
 
-		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
-        wp_enqueue_style( 'screen' );
+		wp_register_style( 'screen', get_template_directory_uri().'/style.css', '', '', 'screen' );
+		wp_enqueue_style( 'screen' );
+
+		$colorScheme = get_theme_mod( 'ed2_color_scheme' );
+		switch ($colorScheme):
+			case 'purple':
+			case 'teal':
+				wp_register_style( 'color', get_template_directory_uri().'/css/' . $colorScheme . '.css', '', '', 'screen' );
+			break;
+			case 'orange':
+			default:
+			wp_register_style( 'color', get_template_directory_uri().'/css/orange.css', '', '', 'screen' );
+		endswitch;
+		wp_enqueue_style( 'color' );
 	}
 
 	/* ========================================================================================================================

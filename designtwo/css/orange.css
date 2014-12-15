@@ -1,0 +1,101 @@
+/*
+ Colors:
+ #044c7d is dark blue
+ #036cb6 is Pantone Blue 660 from the primary color palette
+ #60a2d1 is light blue
+ #c8e6fa is pale blue
+ #f8971d is Pantone 144, orange from the secondary color palette
+ #fadeb9 is pale orange
+ #fff is white
+*/
+
+div.main-wrapper {
+	background-image:url('../img/background-orange.png');
+	background-color:#f8971d;
+}
+
+a:link,
+a:visited { color:#f8971d; }
+
+div.main-border,
+div.main-border-bottom { background:url('../img/border-orange.png'); }
+
+nav {
+	background:-webkit-linear-gradient(#60a2d1,#c8e6fa);
+	background:-o-linear-gradient(#60a2d1,#c8e6fa);
+	background:-moz-linear-gradient(#60a2d1,#c8e6fa);
+	background:linear-gradient(#60a2d1,#c8e6fa);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#60a2d1',endColorstr='#c8e6fa',GradientType=0);
+}
+
+nav li { color:#036cb6; }
+
+nav ul li a:link,
+nav ul li a:visited {
+	color:#036cb6;
+	border-left-color:#60a2d1;
+}
+
+nav ul li a:hover,
+nav ul li a:active { color:#f8971d; }
+
+nav ul li.current_page_item a,
+nav ul li.current_page_parent a { color:#f8971d; }
+
+h3 { background-color:#036cb6; }
+
+article.main-post {
+	background-color:#036cb6;
+	color:#f8971d;
+}
+
+article.main-post img { border-color:#f8971d; }
+
+article.video-post iframe { border-color:#036cb6; }
+
+article.rss-post {
+	width:49%;
+	padding-left:25px;
+}
+
+section.parish-leaders h4,
+section.video h4 {
+	color:#f8971d;
+	background:-webkit-linear-gradient(#fadeb9,#fff);
+	background:-o-linear-gradient(#fadeb9,#fff);
+	background:-moz-linear-gradient(#fadeb9,#fff);
+	background:linear-gradient(#fadeb9,#fff);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fadeb9',endColorstr='#ffffff',GradientType=0);
+}
+
+h4.article-header { color:#f8971d; }
+
+div.sidebar-contents p { border-bottom-color:#036cb6; }
+
+div.service-times-wrapper { border-bottom-color:#036cb6; }
+
+span.times { color:#036cb6; }
+
+div.widget_simplesubscribe { border-bottom-color:#036cb6; }
+
+a.more-link:link,
+a.more-link:visited { color:#036cb6; }
+input[type=submit],
+div.sidebar-contents p.button {
+	background:-webkit-linear-gradient(#036cb6,#044c7d);
+	background:-o-linear-gradient(#036cb6,#044c7d);
+	background:-moz-linear-gradient(#036cb6,#044c7d);
+	background:linear-gradient(#036cb6,#044c7d);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#036cb6',endColorstr='#044c7d',GradientType=0);
+}
+
+div.sidebar-contents p.button a:hover,
+div.sidebar-contents p.button a:active { border:2px solid #fff; }
+
+footer {
+	background:-webkit-linear-gradient(#044c7d,#036cb6);
+	background:-o-linear-gradient(#044c7d,#036cb6);
+	background:-moz-linear-gradient(#044c7d,#036cb6);
+	background:linear-gradient(#044c7d,#036cb6);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#044c7d',endColorstr='#036cb6',GradientType=0);
+}

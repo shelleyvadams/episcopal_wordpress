@@ -1,0 +1,105 @@
+/*
+ Colors:
+ #37bdb2 is Pantone 3265, teal from the secondary color palette
+ #028a7f is dark teal
+ #c4ece8 is pale teal
+ #fff is white
+ #332a86 is Pantone 2685, purple from the secondary color palette
+ #241d5e is dark purple
+ #918cb8 is a lighter purple;
+ #e3e3fd is pale purple
+*/
+
+div.main-wrapper {
+	background-image:url('../img/background-teal.png');
+	background-color:#37bdb2;
+}
+
+a:link,
+a:visited { color:#37bdb2; }
+
+div.main-border,
+div.main-border-bottom { background:url('../img/border-teal.png'); }
+
+nav {
+	background:-webkit-linear-gradient(#918cb8,#e3e3fd);
+	background:-o-linear-gradient(#918cb8,#e3e3fd);
+	background:-moz-linear-gradient(#918cb8,#e3e3fd);
+	background:linear-gradient(#918cb8,#e3e3fd);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#918cb8',endColorstr='#e3e3fd',GradientType=0);
+}
+
+nav li { color:#37bdb2; }
+
+nav ul li a:link,
+nav ul li a:visited {
+	color:#fff;
+	border-left-color:#fff;
+}
+
+nav ul li a:hover,
+nav ul li a:active { color:#37bdb2; }
+
+nav ul li.current_page_item a,
+nav ul li.current_page_parent a { color:#37bdb2; }
+
+h3 { background-color:#332a86; }
+
+article.main-post {
+	background-color:#332a86;
+	color:#37bdb2;
+}
+
+article.main-post img { border-color:#37bdb2; }
+
+article.video-post iframe { border-color:#332a86; }
+
+article.rss-post {
+	width:46.35%;
+	padding:20px;
+	margin-left:25px;
+	background-color:#332a86;
+}
+
+section.parish-leaders h4,
+section.video h4 {
+	color:#37bdb2;
+	background:-webkit-linear-gradient(#c4ece8,#fff);
+	background:-o-linear-gradient(#c4ece8,#fff);
+	background:-moz-linear-gradient(#c4ece8,#fff);
+	background:linear-gradient(#c4ece8,#fff);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c4ece8',endColorstr='#ffffff',GradientType=0);
+}
+
+h4.article-header { color:#37bdb2; }
+
+div.sidebar-contents p { border-bottom-color:#332a86; }
+
+div.service-times-wrapper { border-bottom-color:#332a86; }
+
+span.times { color:#332a86; }
+
+div.widget_simplesubscribe { border-bottom-color:#332a86; }
+
+a.more-link:link,
+a.more-link:visited { color:#332a86; }
+
+input[type=submit],
+div.sidebar-contents p.button {
+	background:-webkit-linear-gradient(#332a86,#241d5e);
+	background:-o-linear-gradient(#332a86,#241d5e);
+	background:-moz-linear-gradient(#332a86,#241d5e);
+	background:linear-gradient(#332a86,#241d5e);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#332a86',endColorstr='#241d5e',GradientType=0);
+}
+
+div.sidebar-contents p.button a:hover,
+div.sidebar-contents p.button a:active { border-style:none; }
+
+footer {
+	background:-webkit-linear-gradient(#028a7f,#37bdb2);
+	background:-o-linear-gradient(#028a7f,#37bdb2);
+	background:-moz-linear-gradient(#028a7f,#37bdb2);
+	background:linear-gradient(#028a7f,#37bdb2);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#028a7f',endColorstr='#37bdb2',GradientType=0);
+}
