@@ -1,11 +1,11 @@
 /*
- Theme Name:   Episcopal Design Two - Orange
+ Theme Name:   Episcopal Design Two
  Theme URI:    https://github.com/shelleyvadams/episcopal_wordpress/tree/master/designtwo
- Description:  Orange Episcopal Church Theme. Version 1.0 by John Balnaves (http://johnbalnaves.com)
+ Description:  Episcopal Church Theme with three color options. Version 1.0 by John Balnaves (http://johnbalnaves.com)
  Version:      1.1
  Author:       Shelley V. Adams
  Author URI:   http://shelleyvadams.github.io/
- Tags:         orange, stained glass, Episcopal Church
+ Tags:         orange, purple, teal, stained glass, Episcopal Church, theme customizer
 */
 
 
@@ -106,14 +106,9 @@ h6 { font-weight:bold; }
 /*
  Colors:
  #000 is black
- #044c7d is dark blue
  #036cb6 is Pantone Blue 660 from the primary color palette
- #60a2d1 is light blue
  #777 is gray
  #8a7967 is Pantone Warm Gray 10 from the primary color palette
- #c8e6fa is pale blue
- #f8971d is Pantone 144, orange from the secondary color palette
- #fadeb9 is pale orange
  #fff is white
 */
 
@@ -136,7 +131,7 @@ h6 {
 }
 
 div.main-wrapper {
-	background:url('img/background.png') no-repeat #f8971d;
+	background-repeat:no-repeat;
 	width:960px;
 	margin:0 auto;
 }
@@ -154,7 +149,6 @@ aside {
 
 a:link,
 a:visited {
-	color:#f8971d;
 	text-decoration:none;
 }
 
@@ -189,13 +183,9 @@ div.slide-show {
 
 div.slide-show img{ width:100%; }
 
-div.main-border {
-	background:url('img/border.png');
-	height:8px;
-}
+div.main-border { height:8px; }
 
 div.main-border-bottom {
-	background:url('img/border.png');
 	height:8px;
 	position:absolute;
 	bottom:0;
@@ -205,11 +195,6 @@ div.main-border-bottom {
 /* Navigation */
 nav {
 	width:715px;
-	background:-webkit-linear-gradient(#60a2d1,#c8e6fa); /* For Safari 5.1 to 6.0 */
-	background:-o-linear-gradient(#60a2d1,#c8e6fa); /* For Opera 11.1 to 12.0 */
-	background:-moz-linear-gradient(#60a2d1,#c8e6fa); /* For Firefox 3.6 to 15 */
-	background:linear-gradient(#60a2d1,#c8e6fa); /* Standard syntax */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#60a2d1',endColorstr='#c8e6fa',GradientType=0); /* IE6-9 */
 	display:table;
 }
 
@@ -221,29 +206,23 @@ nav li {
 
 nav ul li a:link,
 nav ul li a:visited {
-	color:#036cb6;
 	padding:0 6.9px;
 	text-align:center;
 	font-size:16px;
 	text-decoration:none;
 	display:block;
 	text-transform:uppercase;
-	border-left:1px solid #60a2d1;
+	border-left-width:1px;
+	border-left-style:solid;
 	line-height:50px;
 	font-weight:bold;
 }
 
 nav ul li a:hover,
-nav ul li a:active {
-	color:#f8971d;
-	background:#fff;
-}
+nav ul li a:active { background:#fff; }
 
 nav ul li.current_page_item a,
-nav ul li.current_page_parent a {
-	color:#f8971d;
-	background:#fff;
-}
+nav ul li.current_page_parent a { background:#fff; }
 
 nav ul li:first-child a { border-left:0; }
 
@@ -262,7 +241,6 @@ section {
 }
 
 h3 {
-	background:#036cb6;
 	padding:30px;
 	color:#fff;
 	text-transform:uppercase;
@@ -291,8 +269,6 @@ article.other-post img {
 }
 
 article.main-post {
-	background-color:#036cb6;
-	color:#f8971d;
 	width:715px;
 	padding:50px 25px;
 	font-size:18px;
@@ -305,7 +281,8 @@ article.main-post img {
 	margin-top:0;
 	margin-right:15px;
 	margin-bottom:0;
-	border:3px solid #f8971d;
+	border-width:3px;
+	border-style:solid;
 }
 
 article.main-post a:link,
@@ -339,12 +316,13 @@ span.lowercase {
 
 article.video-post { padding:0 0 25px 25px; }
 
-article.video-post iframe { border:10px solid #036cb6; }
+article.video-post iframe {
+	border-width:10px;
+	border-style:solid;
+}
 
 article.rss-post {
 	float:left;
-	width:49%;
-	padding-left:25px;
 }
 
 /* About */
@@ -417,14 +395,8 @@ section.video h4 {
 	padding:20px 0 40px;
 	text-align:center;
 	width:715px;
-	color:#f8971d;
 	font-family:"Times New Roman",Times,serif;
 	font-size:20px;
-	background:-webkit-linear-gradient(#fadeb9,#fff); /* For Safari 5.1 to 6.0 */
-	background:-o-linear-gradient(#fadeb9,#fff); /* For Opera 11.1 to 12.0 */
-	background:-moz-linear-gradient(#fadeb9,#fff); /* For Firefox 3.6 to 15 */
-	background:linear-gradient(#fadeb9,#fff); /* Standard syntax */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fadeb9',endColorstr='#ffffff',GradientType=0); /* IE6-9 */
 }
 
 article.person {
@@ -455,10 +427,7 @@ article.post-article img {
 	margin-bottom:5px;
 }
 
-h4.article-header {
-	color:#f8971d;
-	font-size:18px;
-}
+h4.article-header { font-size:18px; }
 
 p.article-info {
 	margin-top:5px;
@@ -494,7 +463,8 @@ h2.welcome {
 
 div.sidebar-contents p {
 	padding-bottom:35px;
-	border-bottom:2px solid #036cb6;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
 	margin-bottom:0;
 }
 
@@ -512,11 +482,11 @@ h2.widgettitle {
 /* sidebar - service times */
 div.service-times-wrapper {
 	padding-bottom:35px;
-	border-bottom:2px solid #036cb6;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
 }
 
 span.times {
-	color:#036cb6;
 	font-weight:normal;
 	font-size:14px;
 }
@@ -524,18 +494,14 @@ span.times {
 /* sidebar - subscribe */
 div.widget_simplesubscribe {
 	padding-bottom:35px;
-	border-bottom:2px solid #036cb6;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
 }
 
 input { width:100%; }
 
 input[type=submit] {
 	border:none;
-	background:-webkit-linear-gradient(#036cb6,#044c7d); /* For Safari 5.1 to 6.0 */
-	background:-o-linear-gradient(#036cb6,#044c7d); /* For Opera 11.1 to 12.0 */
-	background:-moz-linear-gradient(#036cb6,#044c7d); /* For Firefox 3.6 to 15 */
-	background:linear-gradient(#036cb6,#044c7d); /* Standard syntax */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#036cb6',endColorstr='#044c7d',GradientType=0); /* IE6-9 */
 	text-align:center;
 	padding:0;
 	margin-top:10px;
@@ -581,11 +547,6 @@ a.more-link:visited {
 
 div.sidebar-contents p.button {
 	border-bottom:none;
-	background:-webkit-linear-gradient(#036cb6,#044c7d); /* For Safari 5.1 to 6.0 */
-	background:-o-linear-gradient(#036cb6,#044c7d); /* For Opera 11.1 to 12.0 */
-	background:-moz-linear-gradient(#036cb6,#044c7d); /* For Firefox 3.6 to 15 */
-	background:linear-gradient(#036cb6,#044c7d); /* Standard syntax */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#036cb6',endColorstr='#044c7d',GradientType=0); /* IE6-9 */
 	text-align:center;
 	padding:0;
 	font-weight:bold;
@@ -601,19 +562,11 @@ div.sidebar-contents p.button a:visited {
 	font-family:'Arial Narrow',sans-serif;
 }
 
-div.sidebar-contents p.button a:hover,
-div.sidebar-contents p.button a:active { border:2px solid #fff; }
-
 /* Footer */
 footer {
 	width:100%;
 	height:160px;
 	float:left;
-	background:-webkit-linear-gradient(#044c7d,#036cb6); /* For Safari 5.1 to 6.0 */
-	background:-o-linear-gradient(#044c7d,#036cb6); /* For Opera 11.1 to 12.0 */
-	background:-moz-linear-gradient(#044c7d,#036cb6); /* For Firefox 3.6 to 15 */
-	background:linear-gradient(#044c7d,#036cb6); /* Standard syntax */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#044c7d',endColorstr='#036cb6',GradientType=0); /* IE6-9 */
 	z-index:1;
 }
 
