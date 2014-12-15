@@ -18,6 +18,9 @@ div.main-wrapper {
 a:link,
 a:visited { color:#37bdb2; }
 
+.sidebar-contents a:link,
+.sidebar-contents a:visited { color:#332a86; }
+
 div.main-border,
 div.main-border-bottom { background:url('../img/border-teal.png'); }
 

@@ -84,5 +84,7 @@
 
 			<p class="button"><a href="<?php echo get_permalink( get_page_by_path( 'contacts' ) ) ?>">View Full List</a>
 		</div>
+		<!--/.parish-leaders-wrapper-->
 	</div>
+	<!--/.sidebar-contents-->
 </aside>

@@ -296,37 +296,19 @@
 	if (function_exists('register_sidebar')) {
 
 		register_sidebar(array(
-			'name' => 'Header',
-			'id'   => 'header',
-			'description'   => 'This is a widgetized area.',
+			'name' => 'Sidebar',
+			'id'   => 'sidebar',
+			'description'   => 'Area for sidebar widgets.',
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 		));
 
 		register_sidebar(array(
-			'name' => 'Sidebar',
-			'id'   => 'sidebar',
-			'description'   => 'This is a widgetized area.',
+			'name' => 'Header',
+			'id'   => 'header',
+			'description'   => 'Widget area before site header.',
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 		));
-	}
 
-	// unregister all widgets
-	function jpb_unregister_widgets(){
-		unregister_widget('WP_Widget_Pages');
-		unregister_widget('WP_Widget_Calendar');
-		unregister_widget('WP_Widget_Archives');
-		unregister_widget('WP_Widget_Links');
-		unregister_widget('WP_Widget_Meta');
-		unregister_widget('WP_Widget_Search');
-		unregister_widget('WP_Widget_Text');
-		unregister_widget('WP_Widget_Categories');
-		unregister_widget('WP_Widget_Recent_Posts');
-		unregister_widget('WP_Widget_Recent_Comments');
-		unregister_widget('WP_Widget_RSS');
-		unregister_widget('WP_Widget_Tag_Cloud');
-		unregister_widget('WP_Nav_Menu_Widget');
 	}
-
-	add_action( 'widgets_init', 'jpb_unregister_widgets' );

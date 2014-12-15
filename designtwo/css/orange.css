@@ -17,6 +17,9 @@ div.main-wrapper {
 a:link,
 a:visited { color:#f8971d; }
 
+.sidebar-contents a:link,
+.sidebar-contents a:visited { color:#036cb6; }
+
 div.main-border,
 div.main-border-bottom { background:url('../img/border-orange.png'); }
 
@@ -80,6 +83,7 @@ div.widget_simplesubscribe { border-bottom-color:#036cb6; }
 
 a.more-link:link,
 a.more-link:visited { color:#036cb6; }
+
 input[type=submit],
 div.sidebar-contents p.button {
 	background:-webkit-linear-gradient(#036cb6,#044c7d);
