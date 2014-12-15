@@ -1,0 +1,55 @@
+/*
+ Colors:
+ #036cb6 is Pantone Blue 660 from the primary color palette
+ #044c7d is dark blue
+*/
+
+a:link,
+a:visited { color:#036cb6; }
+
+header { background-image:url('../img/header-blue.jpg'); }
+
+div.main-border { background-image:url('../img/border-blue.png'); }
+
+div.menu-primary-navigation-container { background-color:#036cb6; }
+
+nav a:hover,
+nav a:active { color:#036cb6; }
+
+li.current_page_item a { color:#036cb6; }
+
+h3 { background-color:#036cb6; }
+
+article.other-post h4 { color:#036cb6; }
+
+article.main-post h4,
+article.main-post a:link,
+article.main-post a:visited { color:#036cb6; }
+
+article.second-posts h4 { color:#036cb6; }
+
+article.rss-post { color:#036cb6; }
+
+h4.article-header { color:#036cb6; }
+
+h4.banner,
+nav h2 { background-image:url('../img/header-blue.jpg'); }
+
+h2.sidebar,
+h2.widgettitle { border-color:#036cb6; }
+
+a.more-link:link,
+a.more-link:visited { color:#036cb6; }
+
+span.times { color:#036cb6; }
+
+input[type=submit],
+div.sidebar-contents p.button {
+	background:-webkit-linear-gradient(#036cb6,#044c7d);
+	background:-o-linear-gradient(#036cb6,#044c7d);
+	background:-moz-linear-gradient(#036cb6,#044c7d);
+	background:linear-gradient(#036cb6,#044c7d);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#036cb6',endColorstr='#044c7d',GradientType=0);
+}
+
+footer { background-color:#036cb6; }

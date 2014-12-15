@@ -1,12 +1,11 @@
 <?php
 	/**
-	 * Starkers functions and definitions
+	 * EpiscopalDesignOne functions and definitions (Based on Starkers 4.0)
 	 *
 	 * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
 	 *
-	 * @package     WordPress
-	 * @subpackage  Starkers
-	 * @since       Starkers 4.0
+	 * @package     EpiscopalDesignOne
+	 * @since       EpiscopalDesignOne 1.1.0
 	 */
 
 	/* ========================================================================================================================
@@ -40,6 +39,66 @@
 
 	/* ========================================================================================================================
 
+	Theme Customizer
+
+	======================================================================================================================== */
+
+	/**
+	 * Registers options with the Theme Customizer
+	 *
+	 * @param      object    $wp_customize    The WordPress Theme Customizer
+	 * @package    EpiscopalDesignOne
+	 * @since      1.1.0
+	 * @version    1.1.0
+	 */
+	function ed1_register_theme_customizer( $wp_customize ) {
+
+		/* Change Color Scheme */
+		$wp_customize->add_setting(
+			'ed1_color_scheme',
+			array(
+				'default'   => 'blue',
+				'transport' => 'postMessage'
+			)
+		);
+
+		$wp_customize->add_control(
+			'ed1_color_scheme',
+			array(
+				'section' => 'colors',
+				'label'   => 'Color Scheme',
+				'type'    => 'radio',
+				'choices' => array(
+					'blue' => 'Blue',
+					'red'  => 'Red',
+					'teal' => 'Teal'
+				)
+			)
+		);
+
+	} // end ed1_register_theme_customizer
+	add_action( 'customize_register', 'ed1_register_theme_customizer' );
+
+	/**
+	 * Registers the Theme Customizer Preview with WordPress.
+	 *
+	 * @package    EpiscopalDesignOne
+	 * @since      1.1.0
+	 * @version    1.1.0
+	 */
+	function ed1_customizer_live_preview() {
+		wp_enqueue_script(
+			'ed1-theme-customizer',
+			get_template_directory_uri() . '/js/theme-customizer.js',
+			array( 'jquery', 'customize-preview' ),
+			'1.0.0',
+			true
+		);
+	} // end ed1_customizer_live_preview
+	add_action( 'customize_preview_init', 'ed1_customizer_live_preview' );
+
+	/* ========================================================================================================================
+
 	Actions and Filters
 
 	======================================================================================================================== */
@@ -59,7 +118,7 @@
 	 * Add scripts via wp_head()
 	 *
 	 * @return void
-	 * @author Keir Whitaker
+	 * @author Shelley V. Adams
 	 */
 
 	function starkers_script_enqueuer() {
@@ -68,6 +127,18 @@
 
 		wp_register_style( 'screen', get_template_directory_uri().'/style.css', '', '', 'screen' );
 		wp_enqueue_style( 'screen' );
+
+		$colorScheme = get_theme_mod( 'ed1_color_scheme' );
+		switch ($colorScheme):
+			case 'red':
+			case 'teal':
+				wp_register_style( 'color', get_template_directory_uri().'/css/' . $colorScheme . '.css', '', '', 'screen' );
+			break;
+			case 'blue':
+			default:
+			wp_register_style( 'color', get_template_directory_uri().'/css/blue.css', '', '', 'screen' );
+		endswitch;
+		wp_enqueue_style( 'color' );
 	}
 
 	/* ========================================================================================================================

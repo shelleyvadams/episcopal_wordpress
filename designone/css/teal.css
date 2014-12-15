@@ -1,0 +1,73 @@
+/*
+ Colors:
+ #37bdb2 is Pantone 3265, teal from the secondary color palette
+ #028a7f is dark teal
+ #abcfc8 is a light, very muted teal
+ #8a7967 is Pantone Warm Gray 10 from the primary color palette.
+ #fff is white
+*/
+
+div.section-wrapper { background-color:#abcfc8; }
+
+a:link,
+a:visited { color:#37bdb2; }
+
+header { background-image:url('../img/header-teal.jpg'); }
+	
+div.main-border { background-image:url('../img/border-teal.png'); }
+	
+div.menu-primary-navigation-container { background-color:#37bdb2; }
+
+nav a:hover,
+nav a:active { color:#37bdb2; }
+
+li.current_page_item a { color:#37bdb2; }
+
+h3 { background-color:#37bdb2; }
+	
+article.other-post h4 { color:#37bdb2; }
+
+article.main-post h4,
+article.main-post a:link,
+article.main-post a:visited { color:#37bdb2; }
+
+article.second-posts h4 { color:#37bdb2; }
+
+article.video-post iframe { border-color:#abcfc8; }
+
+article.rss-post {
+	background-color:#abcfc8;
+	color:#fff;
+}
+article.rss-post h2 a { color:#fff; }
+	
+h4.article-header { color:#37bdb2; }
+
+aside { color:#8a7967; }
+	
+h4.banner,
+nav h2 { background-image:url('../img/header-teal.jpg'); }
+
+h2.sidebar,
+h2.widgettitle {
+	color:#8a7967;
+	border-color:#37bdb2;
+}
+	
+a.more-link:link,
+a.more-link:visited { color:#37bdb2; }
+
+span.times { color:#37bdb2; }
+
+input[type=submit],
+div.sidebar-contents p.button {
+	background:-webkit-linear-gradient(#37bdb2,#028a7f);
+	background:-o-linear-gradient(#37bdb2,#028a7f);
+	background:-moz-linear-gradient(#37bdb2,#028a7f);
+	background:linear-gradient(#37bdb2,#028a7f);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#37bdb2',endColorstr='#028a7f',GradientType=0);
+}
+
+article.people-sidebar ul a { color:#8a7967; }
+
+footer { background-color:#8a7967; }
