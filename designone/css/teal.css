@@ -1,52 +1,63 @@
 /*
- Theme Name:   Episcopal Design One - Teal
- Theme URI:    https://github.com/shelleyvadams/episcopal_wordpress/tree/master/designone_teal
- Description:  Teal Episcopal Church theme. Version 1.0 by John Balnaves (http://johnbalnaves.com)
- Version:      1.1
- Author:       Shelley V. Adams
- Author URI:   http://shelleyvadams.github.io/
- Template:     designone
- Tags:         teal, stained glass, Episcopal Church
+ Colors:
+ #37bdb2 is Pantone 3265, teal from the secondary color palette
+ #028a7f is dark teal
+ #abcfc8 is a light, very muted teal
+ #8a7967 is Pantone Warm Gray 10 from the primary color palette.
+ #fff is white
 */
 
-/*
- This is a child theme.
- Only change colors and images (as urls are relative to the stylesheet location), everything else has been handled by the parent theme.
-*/
+div.section-wrapper { background-color:#abcfc8; }
 
-header,
-h4.banner,
-nav h2 { background-image:url('img/header.jpg'); }
+a:link,
+a:visited { color:#37bdb2; }
 
-div.main-border { background-image:url('img/border.png'); }
-
-/* #37bdb2 is Pantone 3265, teal from the secondary color palette */
-
-h3,
+header { background-image:url('../img/header-teal.jpg'); }
+	
+div.main-border { background-image:url('../img/border-teal.png'); }
+	
 div.menu-primary-navigation-container { background-color:#37bdb2; }
+
+nav a:hover,
+nav a:active { color:#37bdb2; }
+
+li.current_page_item a { color:#37bdb2; }
+
+h3 { background-color:#37bdb2; }
+	
+article.other-post h4 { color:#37bdb2; }
+
+article.main-post h4,
+article.main-post a:link,
+article.main-post a:visited { color:#37bdb2; }
+
+article.second-posts h4 { color:#37bdb2; }
+
+article.video-post iframe { border-color:#abcfc8; }
+
+article.rss-post {
+	background-color:#abcfc8;
+	color:#fff;
+}
+article.rss-post h2 a { color:#fff; }
+	
+h4.article-header { color:#37bdb2; }
+
+aside { color:#8a7967; }
+	
+h4.banner,
+nav h2 { background-image:url('../img/header-teal.jpg'); }
 
 h2.sidebar,
 h2.widgettitle {
-	border-top-color:#37bdb2;
-	border-bottom-color:#37bdb2;
+	color:#8a7967;
+	border-color:#37bdb2;
 }
-
-a:link,
-a:visited,
-nav a:hover,
-nav a:active,
-li.current_page_item a,
-article.other-post h4,
-article.main-post h4,
-article.main-post a:link,
-article.main-post a:visited,
-article.second-posts h4,
-h4.article-header,
+	
 a.more-link:link,
-a.more-link:visited,
-span.times { color:#37bdb2; }
+a.more-link:visited { color:#37bdb2; }
 
-/* #028a7f is dark teal */
+span.times { color:#37bdb2; }
 
 input[type=submit],
 div.sidebar-contents p.button {
@@ -57,23 +68,6 @@ div.sidebar-contents p.button {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#37bdb2',endColorstr='#028a7f',GradientType=0);
 }
 
-/* #8a7967 is Pantone Warm Gray 10 from the primary color palette. */
-
-footer { background-color:#8a7967; }
-
-aside,
-h2.sidebar,
-h2.widgettitle,
 article.people-sidebar ul a { color:#8a7967; }
 
-/* #abcfc8 is a light, very muted teal */
-
-div.section-wrapper,
-article.rss-post { background-color:#abcfc8; }
-
-article.video-post iframe { border-color:#abcfc8; }
-
-/* #fff is white */
-
-article.rss-post,
-article.rss-post h2 a { color:#fff; }
+footer { background-color:#8a7967; }

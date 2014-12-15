@@ -1,53 +1,47 @@
 /*
- Theme Name:   Episcopal Design One - Red
- Theme URI:    https://github.com/shelleyvadams/episcopal_wordpress/tree/master/designone_red
- Description:  Red Episcopal Church theme. Version 1.0 by John Balnaves (http://johnbalnaves.com)
- Version:      1.1
- Author:       Shelley V. Adams
- Author URI:   http://shelleyvadams.github.io/
- Template:     designone
- Tags:         red, stained glass, Episcopal Church
+ Colors:
+ #d11242 is Pantone Red 193 from the primary color palette
+ #910d2c is dark red
 */
-
-/*
- This is a child theme.
- Only change colors and images (as urls are relative to the stylesheet location), everything else has been handled by the parent theme.
-*/
-
-header,
-h4.banner,
-nav h2 { background-image:url('img/header.jpg'); }
-
-div.main-border { background-image:url('img/border.png'); }
-
-/* #d11242 is Pantone Red 193 from the primary color palette */
-
-footer,
-div.menu-primary-navigation-container { background-color:#d11242; }
-
-h2.sidebar,
-h2.widgettitle {
-	border-top-color:#d11242;
-	border-bottom-color:#d11242;
-}
 
 a:link,
-a:visited,
+a:visited { color:#d11242; }
+
+header { background-image:url('../img/header-red.jpg'); }
+
+div.main-border { background-image:url('../img/border-red.png'); }
+
+div.menu-primary-navigation-container { background-color:#d11242; }
+
 nav a:hover,
-nav a:active,
-li.current_page_item a,
-article.other-post h4,
+nav a:active { color:#d11242; }
+
+li.current_page_item a { color:#d11242; }
+
+h3 { background-color:#d11242; }
+
+article.other-post h4 { color:#d11242; }
+
 article.main-post h4,
 article.main-post a:link,
-article.main-post a:visited,
-article.second-posts h4,
-article.rss-post,
-h4.article-header,
-a.more-link:link,
-a.more-link:visited,
-span.times { color:#d11242; }
+article.main-post a:visited { color:#d11242; }
 
-/* #910d2c is dark red */
+article.second-posts h4 { color:#d11242; }
+
+article.rss-post { color:#d11242; }
+
+h4.article-header { color:#d11242; }
+
+h4.banner,
+nav h2 { background-image:url('../img/header-red.jpg'); }
+
+h2.sidebar,
+h2.widgettitle { border-color:#d11242; }
+
+a.more-link:link,
+a.more-link:visited { color:#d11242; }
+
+span.times { color:#d11242; }
 
 input[type=submit],
 div.sidebar-contents p.button {
@@ -57,3 +51,5 @@ div.sidebar-contents p.button {
 	background:linear-gradient(#d11242,#910d2c);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d11242',endColorstr='#910d2c',GradientType=0);
 }
+
+footer { background-color:#d11242; }
