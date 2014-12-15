@@ -3,15 +3,11 @@ Episcopal WordPress themes
 
 Free branded WordPress themes from [The Episcopal Church](http://episcopalchurch.org/), with continuing community development.
 
+Each theme includes three color scheme options availible via WordPress' theme customizer.
+
 ## Theme installation
 
 Copy the directory (folder) for the desired theme into `wp-content/themes/` as a subdirectory.
-
-### Child themes
-
-Color variations indicated by an `_` underscore are [Child themes][W1] and require the corresponding parent to be installed in order to function properly. For example, to use `designtwo_teal`, you must also install `designtwo`.
-
-These are being replaced with Theme Customizer options so that all color variants will be accessible from a single theme.
 
 ## Plugins not included
 
@@ -30,7 +26,6 @@ Yet to be determined, but expect something compatible with GNU's GPLv2.
 
 See the [project wiki](https://github.com/shelleyvadams/episcopal_wordpress/wiki).
 
-[W1]: https://codex.wordpress.org/Child_Themes
 [P1]: http://www.kieranoshea.com/projects/calendar/
 [P2]: https://wordpress.org/plugins/simple-social-icons/
 [P3]: https://wordpress.org/plugins/simple-subscribe/
