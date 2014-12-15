@@ -9,7 +9,9 @@ Copy the directory (folder) for the desired theme into `wp-content/themes/` as a
 
 ### Child themes
 
-In order to function properly, color variations (indicated by an `_` underscore) require the corresponding parent to be installed as well. For example, to use `designone_red`, you must also install `designone`.
+Color variations indicated by an `_` underscore are [Child themes][W1] and require the corresponding parent to be installed in order to function properly. For example, to use `designtwo_teal`, you must also install `designtwo`.
+
+These are being replaced with Theme Customizer options so that all color variants will be accessible from a single theme.
 
 ## Plugins not included
 
@@ -28,6 +30,7 @@ Yet to be determined, but expect something compatible with GNU's GPLv2.
 
 See the [project wiki](https://github.com/shelleyvadams/episcopal_wordpress/wiki).
 
+[W1]: https://codex.wordpress.org/Child_Themes
 [P1]: http://www.kieranoshea.com/projects/calendar/
 [P2]: https://wordpress.org/plugins/simple-social-icons/
 [P3]: https://wordpress.org/plugins/simple-subscribe/
