@@ -28,6 +28,8 @@ nav {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#60a2d1',endColorstr='#c8e6fa',GradientType=0);
 }
 
+nav li { color:#036cb6; }
+
 nav ul li a:link,
 nav ul li a:visited {
 	color:#036cb6;
@@ -47,13 +49,9 @@ article.main-post {
 	color:#f8971d;
 }
 
-article.main-post img {
-	border-color:#f8971d;
-}
+article.main-post img { border-color:#f8971d; }
 
-article.video-post iframe {
-	border-color:#036cb6;
-}
+article.video-post iframe { border-color:#036cb6; }
 
 article.rss-post {
 	width:49%;
@@ -70,34 +68,19 @@ section.video h4 {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fadeb9',endColorstr='#ffffff',GradientType=0);
 }
 
-h4.article-header {
-	color:#f8971d;
-}
+h4.article-header { color:#f8971d; }
 
-div.sidebar-contents p {
-	border-bottom-color:#036cb6;
-}
+div.sidebar-contents p { border-bottom-color:#036cb6; }
 
-div.service-times-wrapper {
-	border-bottom-color:#036cb6;
-}
+div.service-times-wrapper { border-bottom-color:#036cb6; }
 
-span.times {
-	color:#036cb6;
-}
+span.times { color:#036cb6; }
 
-div.widget_simplesubscribe {
-	border-bottom-color:#036cb6;
-}
+div.widget_simplesubscribe { border-bottom-color:#036cb6; }
 
-input[type=submit] {
-	background:-webkit-linear-gradient(#036cb6,#044c7d);
-	background:-o-linear-gradient(#036cb6,#044c7d);
-	background:-moz-linear-gradient(#036cb6,#044c7d);
-	background:linear-gradient(#036cb6,#044c7d);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#036cb6',endColorstr='#044c7d',GradientType=0);
-}
-
+a.more-link:link,
+a.more-link:visited { color:#036cb6; }
+input[type=submit],
 div.sidebar-contents p.button {
 	background:-webkit-linear-gradient(#036cb6,#044c7d);
 	background:-o-linear-gradient(#036cb6,#044c7d);
@@ -107,9 +90,7 @@ div.sidebar-contents p.button {
 }
 
 div.sidebar-contents p.button a:hover,
-div.sidebar-contents p.button a:active {
-	border:2px solid #fff;
-}
+div.sidebar-contents p.button a:active { border:2px solid #fff; }
 
 footer {
 	background:-webkit-linear-gradient(#044c7d,#036cb6);

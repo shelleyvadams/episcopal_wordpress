@@ -1,82 +1,89 @@
 /*
- Theme Name:   Episcopal Design Two - Purple
- Theme URI:    https://github.com/shelleyvadams/episcopal_wordpress/tree/master/designtwo_purple
- Description:  Purple Episcopal Church theme. Version 1.0 by John Balnaves (http://johnbalnaves.com)
- Version:      1.1
- Author:       Shelley V. Adams
- Author URI:   http://shelleyvadams.github.io/
- Template:     designtwo
- Tags:         purple, stained glass, Episcopal Church
+ Colors:
+ #332a86 is Pantone 2685, purple from the secondary color palette
+ #241d5e is dark purple
+ #7069aa is light purple
+ #c3c0db is an even lighter purple
+ #fff is white
+ #8a7967 is Pantone Warm Gray 10 from the primary color palette.
+ #d5d10e is Pantone 397, gold from the secondary color palette
+ #d4d15c is muted gold
+ #f1f0b3 is light gold
 */
 
-/*
- This is a child theme.
- Most rules apply colors and images (as urls are relative to the stylesheet location), everything else has been handled by the parent theme.
-*/
+div.main-wrapper {
+	background-image:url('../img/background-purple.png');
+	background-color:#7069aa;
+}
+
+a:link,
+a:visited { color:#332a86; }
 
 div.main-border,
-div.main-border-bottom { background-image:url('img/border.png'); }
+div.main-border-bottom { background-image:url('../img/border-purple.png'); }
+
+nav {
+	background:-webkit-linear-gradient(#d4d15c,#f1f0b3);
+	background:-o-linear-gradient(#d4d15c,#f1f0b3);
+	background:-moz-linear-gradient(#d4d15c,#f1f0b3);
+	background:linear-gradient(#d4d15c,#f1f0b3);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d4d15c',endColorstr='#f1f0b3',GradientType=0);
+}
+
+nav li { color:#332a86; }
+
+nav ul li a:link,
+nav ul li a:visited {
+	color:#332a86;
+	border-left-color:#8a7967;
+}
+
+nav ul li a:hover,
+nav ul li a:active { color:#332a86; }
+
+nav ul li.current_page_item a,
+nav ul li.current_page_parent a { color:#332a86; }
+
+h3 { background-color:#d5d10e; }
+
+article.main-post {
+	background-color:#d5d10e;
+	color:#332a86;
+}
+
+article.main-post img { border-color:#332a86; }
+
+article.video-post iframe { border-color:#d5d10e; }
 
 article.rss-post {
 	width:46.35%;
 	margin-left:25px;
 	padding:25px;
+	background-color:#d5d10e;
 }
 
-div.sidebar-contents p.button a:hover,
-div.sidebar-contents p.button a:active { border-style:none; }
-
-/* #332a86 is Pantone 2685, purple from the secondary color palette */
-
-footer {
-	background-image:none;
-	background-color:#332a86;
-}
-
-article.main-post img { border-color:#332a86; }
-
-span.times,
-a:link,
-a:visited,
-a.more-link:link,
-a.more-link:visited,
-nav li,
-article.main-post,
-nav ul li a:link,
-nav ul li a:visited,
-nav ul li a:hover,
-nav ul li a:active,
-nav ul li.current_page_item a,
-nav ul li.current_page_parent a,
-h4.article-header,
 section.parish-leaders h4,
-section.video h4 { color:#332a86; }
-
-/* #7069aa is light purple */
-
-div.main-wrapper {
-	background-image:url('img/background.png');
-	background-color:#7069aa;
+section.video h4 {
+	color:#332a86;
+	background:-webkit-linear-gradient(#c3c0db,#fff);
+	background:-o-linear-gradient(#c3c0db,#fff);
+	background:-moz-linear-gradient(#c3c0db,#fff);
+	background:linear-gradient(#c3c0db,#fff);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c3c0db',endColorstr='#ffffff',GradientType=0);
 }
 
-/* #8a7967 is Pantone Warm Gray 10 from the primary color palette. */
+h4.article-header { color:#332a86; }
 
-nav ul li a:link,
-nav ul li a:visited { border-left-color:#8a7967; }
+div.sidebar-contents p { border-bottom-color:#d5d10e; }
 
-/* #d5d10e is Pantone 397, gold from the secondary color palette */
+div.service-times-wrapper { border-bottom-color:#d5d10e; }
 
-h3,
-article.main-post,
-article.rss-post { background-color:#d5d10e; }
+span.times { color:#332a86; }
 
-article.video-post iframe { border-color:#d5d10e; }
-
-div.sidebar-contents p,
-div.service-times-wrapper,
 div.widget_simplesubscribe { border-bottom-color:#d5d10e; }
 
-/* #241d5e is dark purple */
+a.more-link:link,
+a.more-link:visited { color:#332a86; }
 
 input[type=submit],
 div.sidebar-contents p.button {
@@ -87,23 +94,11 @@ div.sidebar-contents p.button {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#332a86',endColorstr='#241d5e',GradientType=0);
 }
 
-/* #c3c0db is an even lighter purple; #fff is white */
+div.sidebar-contents p.button a:hover,
+div.sidebar-contents p.button a:active { border-style:none; }
 
-section.parish-leaders h4,
-section.video h4 {
-	background:-webkit-linear-gradient(#c3c0db,#fff);
-	background:-o-linear-gradient(#c3c0db,#fff);
-	background:-moz-linear-gradient(#c3c0db,#fff);
-	background:linear-gradient(#c3c0db,#fff);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c3c0db',endColorstr='#ffffff',GradientType=0);
+footer {
+	background-image:none;
+	background-color:#332a86;
 }
 
-/* #d4d15c is muted gold; #f1f0b3 is light gold */
-
-nav {
-	background:-webkit-linear-gradient(#d4d15c,#f1f0b3);
-	background:-o-linear-gradient(#d4d15c,#f1f0b3);
-	background:-moz-linear-gradient(#d4d15c,#f1f0b3);
-	background:linear-gradient(#d4d15c,#f1f0b3);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d4d15c',endColorstr='#f1f0b3',GradientType=0);
-}

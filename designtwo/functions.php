@@ -69,9 +69,9 @@
 				'label'   => 'Color Scheme',
 				'type'    => 'radio',
 				'choices' => array(
-					'orange' => 'Orange',
-					'purple'  => 'Purple',
-					'teal' => 'Teal'
+					'orange' => 'Orange / Blue',
+					'purple'  => 'Purple / Gold',
+					'teal' => 'Teal / Purple'
 				)
 			)
 		);

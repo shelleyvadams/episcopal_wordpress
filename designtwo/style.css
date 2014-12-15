@@ -106,7 +106,6 @@ h6 { font-weight:bold; }
 /*
  Colors:
  #000 is black
- #036cb6 is Pantone Blue 660 from the primary color palette
  #777 is gray
  #8a7967 is Pantone Warm Gray 10 from the primary color palette
  #fff is white
@@ -200,7 +199,6 @@ nav {
 
 nav li {
 	display:inline-block;
-	color:#036cb6;
 	margin-right:-4px;
 }
 
@@ -540,7 +538,6 @@ article.people-sidebar h4 {
 
 a.more-link:link,
 a.more-link:visited {
-	color:#036cb6;
 	font-style:italic;
 	font-weight:bold;
 }
