@@ -1,3 +1,9 @@
+<div id="header_widgets">
+	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('header')) : else : ?>
+
+	<?php endif; ?>
+</div>
+
 <header>
 	<h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 

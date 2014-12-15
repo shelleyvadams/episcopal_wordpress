@@ -306,7 +306,7 @@
 		register_sidebar(array(
 			'name' => 'Header',
 			'id'   => 'header',
-			'description'   => 'Widget area before site header.',
+			'description'   => 'Widget area before site header, ideal for social media icons.',
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 		));
