@@ -8,7 +8,7 @@
 
 
 
-		<section class"contact">
+		<section class="contact">
 
 			<?php $id = get_the_ID(); ?>
 

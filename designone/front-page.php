@@ -31,7 +31,7 @@
 			</div>
 
 				<div class="home-wrapper clearfix">
-					<h4 class="banner">Around The Episcopal Chruch</h4>
+					<h4 class="banner">Around The Episcopal Church</h4>
 					<article class="video-post">
 						<iframe src="//fast.wistia.net/embed/playlists/5nzsiujrhe?media_0_0%5BautoPlay%5D=false&media_0_0%5BcontrolsVisibleOnLoad%5D=false&theme=bento&version=v1&videoOptions%5BautoPlay%5D=true&videoOptions%5BsmallPlayButton%5D=false&videoOptions%5BvideoHeight%5D=225&videoOptions%5BvideoWidth%5D=400&videoOptions%5BvolumeControl%5D=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_playlist" name="wistia_playlist" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="325"></iframe>
 					</article>
