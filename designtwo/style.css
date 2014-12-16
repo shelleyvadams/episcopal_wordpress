@@ -79,23 +79,121 @@ html { box-sizing:border-box; }
 ---------------------------------------------------------------------------------------------------------- */
 
 /*
-14 / 16	= 0.875em     (14px equivalent)
-16 / 16	= 1em         (16px equivalent)
-18 / 16 = 1.125em     (18px equivalent)
-21 / 16 = 1.3125em    (21px equivalent)
-24 / 16 = 1.5em       (24px equivalent)
-30 / 16 = 1.875em     (30px equivalent)
+10 / 16 = 0.625rem     (10px equivalent)
+13 / 16	= 0.8125rem    (13px equivalent)
+14 / 16	= 0.875rem     (14px equivalent)
+15 / 16	= 0.9375rem    (15px equivalent)
+16 / 16	= 1rem         (16px equivalent)
+18 / 16 = 1.125rem     (18px equivalent)
+20 / 16 = 1.25rem      (20px equivalent)
+21 / 16 = 1.3125rem    (21px equivalent)
+22 / 16 = 1.375rem     (22px equivalent)
+24 / 16 = 1.5rem       (24px equivalent)
+30 / 16 = 1.875rem     (30px equivalent)
+40 / 16 = 2.5rem       (40px equivalent)
+70 / 16 = 4.375rem     (70px equivalent)
 
 We strongly recommend you declare font-weight using numerical values, but check to see which weights you're exporting first
 */
 
-/* This helps to identify headings at the initial build stage, but you should write something more precise later on */
+body {
+	font-family:"Times New Roman",Times,serif;
+	font-smoothing:antialiased;
+	-webkit-font-smoothing:antialiased;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 { font-weight:bold; }
+h6 {
+	font-weight:bold;
+	font-family:'Arial Narrow',sans-serif;
+	text-transform:uppercase;
+}
+
+h1 { font-size:1.5rem; }
+
+article.main-post h4 { font-size:2.5rem; }
+
+
+h2.welcome {
+	text-transform:lowercase;
+	font-family:"Times New Roman",Times,serif;
+	font-style:italic;
+	font-size:1.5rem;
+}
+
+h2.sidebar,
+h2.widgettitle {
+	font-family:"Times New Roman",Times,serif;
+	font-size:1.25rem;
+}
+
+h3 { font-size:1.25rem; }
+
+article.second-posts h4 { font-size:1.375rem; }
+
+section.parish-leaders h4,
+section.video h4 {
+	font-family:"Times New Roman",Times,serif;
+	font-size:1.25rem;
+}
+
+h4.article-header { font-size:1.125rem; }
+
+article.people-sidebar h4 {
+	font-style:italic;
+	font-family:"Times New Roman",Times,serif;
+	text-transform:none;
+}
+
+nav li { font-size:1rem; }
+
+nav ul li a:link,
+nav ul li a:visited {
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+span.lowercase {
+	font-style:italic;
+	text-transform:lowercase;
+}
+
+span.letter { font-size:4.375rem; }
+
+p.article-info { font-size:0.875rem; }
+
+span.times {
+	font-weight:normal;
+	font-size:0.875rem;
+}
+
+article.people-sidebar ul { font-size:0.8125rem; }
+
+a.more-link:link,
+a.more-link:visited {
+	font-style:italic;
+	font-weight:bold;
+}
+
+div.sidebar-contents p.button,
+input[type=submit] {
+	text-transform:uppercase;
+	font-family:'Arial Narrow',sans-serif;
+	letter-spacing:0.0625rem;
+	font-weight:bold;
+}
+
+
+
+div.sidebar-contents p.button a:link,
+div.sidebar-contents p.button a:visited {
+	text-transform:inherit;
+	font-family:inherit;
+}
 
 
 
@@ -113,209 +211,162 @@ h6 { font-weight:bold; }
 
 body {
 	background:#777;
-	font-family:"Times New Roman",Times,serif;
-	font-smoothing:antialiased;
-	-webkit-font-smoothing:antialiased;
 	color:#8a7967;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family:'Arial Narrow',sans-serif;
-	text-transform:uppercase;
 }
 
 div.main-wrapper {
 	background-repeat:no-repeat;
-	width:960px;
 	margin:0 auto;
 }
 
-div.section-wrapper {
-	width:715px;
-	float:left;
-}
+div.section-wrapper { float:left; }
 
 aside {
-	width:245px;
 	float:right;
-	margin-top:86px;
+	margin:5.375rem 0 auto auto;
 }
 
 a:link,
-a:visited {
-	text-decoration:none;
-}
+a:visited { text-decoration:none; }
 
 a:hover,
 a:active { text-decoration:underline; }
 
 /* Header */
-div.simple-social-icons {
-	padding-top:10px;
-	padding-left:5px;
-}
+div.simple-social-icons { padding:0.625rem 0 0 0.3125rem; }
 
 h1 {
-	margin-top:25px;
-	margin-left:10px;
-	text-transform:uppercase;
-	font-size:24px;
+	margin:1.04em auto auto 0.42em;
 	color:#fff;
 }
 
 h1 a:link,
 h1 a:visited {
-	color:#fff;
+	color:inherit;
 	text-decoration:none;
 }
 
 div.slide-show {
-	margin-top:25px;
-	-webkit-box-shadow:8px -8px 2px -2px #000;
-	box-shadow:5px -5px 30px -8px #000;
+	margin:1.5625rem auto auto;
+	-webkit-box-shadow:0.5rem -0.5rem 0.125rem -0.125rem #000;
+	box-shadow:0.3125rem -0.3125rem 1.875rem -0.5rem #000;
 }
 
-div.slide-show img{ width:100%; }
+div.slide-show img{
+	width:auto;
+	max-width:100%;
+}
 
-div.main-border { height:8px; }
+div.main-border,
+div.main-border-bottom {
+	height:0.5rem;
+	max-height:8px;
+}
 
 div.main-border-bottom {
-	height:8px;
 	position:absolute;
 	bottom:0;
 	width:100%;
 }
 
 /* Navigation */
-nav {
-	width:715px;
-	display:table;
-}
+nav { display:table; }
 
 nav li {
 	display:inline-block;
-	margin-right:-4px;
+	margin:auto -0.25em auto auto;
 }
 
 nav ul li a:link,
 nav ul li a:visited {
-	padding:0 6.9px;
+	padding:0 0.43125em;
 	text-align:center;
-	font-size:16px;
 	text-decoration:none;
 	display:block;
-	text-transform:uppercase;
-	border-left-width:1px;
+	border-left-width:thin;
 	border-left-style:solid;
-	line-height:50px;
-	font-weight:bold;
+	line-height:3.125em;
 }
 
 nav ul li a:hover,
-nav ul li a:active { background:#fff; }
-
+nav ul li a:active,
 nav ul li.current_page_item a,
 nav ul li.current_page_parent a { background:#fff; }
 
-nav ul li:first-child a { border-left:0; }
+nav ul li:first-child a { border-left-style:none; }
 
 /* Main Content */
 div.wrap {
-	min-height:1200px;
-	width:715px;
-	padding-bottom:25px;
+	min-height:75rem;
 	float:left;
 	background-color:#fff;
 }
 
-section {
-	width:715px;
-	padding-bottom:25px;
-}
+div.wrap,
+section { padding:0 0 1.5625rem; }
 
 h3 {
-	padding:30px;
+	padding:1.5em;
 	color:#fff;
-	text-transform:uppercase;
-	font-size:20px;
 }
 
-article.regular-page { padding:25px 25px 0 25px; }
+article.regular-page { padding:1.5625rem 1.5625rem 0 1.5625rem; }
 
 /* Home Page Posts */
-div.home-wrapper { padding-right:25px; }
-
 article.other-post {
-	display:inline-block;
-	width:32.3%;
-	padding:25px 0 0 25px;
+	margin:1.5625rem auto auto;
 	color:#8a7967;
-	vertical-align:top;
 }
 
-article.other-post p { margin-top:10px; }
+article.other-post p { margin:0.625rem auto auto; }
 
 article.other-post img {
-	width:150px;
-	height:150px;
-	margin-bottom:10px;
+	width:auto;
+	height:auto;
+	max-width:9.375rem;
+	max-height:9.375rem;
+	margin:auto auto 0.625rem;
 }
 
 article.main-post {
-	width:715px;
-	padding:50px 25px;
-	font-size:18px;
+	margin:auto;
+	font-size:1.125rem;
+	padding:2.78em 1.38em !important;
 }
 
 article.main-post img {
-	width:250px;
-	height:250px;
+	width:auto;
+	height:auto;
+	max-width:15.625rem;
+	max-height:15.625rem;
 	float:left;
-	margin-top:0;
-	margin-right:15px;
-	margin-bottom:0;
-	border-width:3px;
+	margin:0 0.9375rem 0 0;
+	border-width:0.1875rem;
 	border-style:solid;
 }
 
 article.main-post a:link,
-article.main-post a:visited {
-	color:#fff;
-	font-size:40px;
-}
+article.main-post a:visited { color:#fff; }
 
 article.main-post a:hover,
 article.main-post a:active { text-decoration:underline; }
 
-article.second-posts {
-	width:49.1%;
-	display:inline-block;
-}
-
-article.second-posts h4 { font-size:22px; }
-
 article.second-posts img {
 	float:none;
-	width:200px;
-	height:200px;
-	margin-bottom:10px;
+	width:auto;
+	height:auto;
+	max-width:12.5rem;
+	max-height:12.5rem;
+	margin:auto auto 0.625rem;
 }
 
 /* Home Page:video */
-span.lowercase {
-	font-style:italic;
-	text-transform:lowercase;
+article.video-post {
+	margin:auto auto 1.5625rem
 }
 
-article.video-post { padding:0 0 25px 25px; }
-
 article.video-post iframe {
-	border-width:10px;
+	border-width:0.625rem;
 	border-style:solid;
 }
 
@@ -325,91 +376,81 @@ article.rss-post {
 
 /* About */
 span.letter {
-	font-size:70px;
 	float:left;
-	margin-right:10px;
-	margin-bottom:-20px;
+	margin:auto 0.625rem -1.25rem auto;
 	position:relative;
-	top:-10px;
+	top:-0.625rem;
 }
 
 /* Parish News */
-div.table-wrapper { padding:15px; }
+div.table-wrapper { padding:0.9375rem; }
 
 table.posts-table,
 tbody,
 tr { width:100%; }
 
 th,
-td { padding:10px; }
+td { padding:0.625rem; }
 
-th {
-	text-align:left;
-	padding-bottom:10px;
-}
+th { text-align:left; }
 
-td.date { width:115px; }
+td.date { width:7.1875rem; }
 
 th.author,
 td.author { text-align:right; }
 
 article.post-article {
-	padding:25px;
+	padding:1.5625rem;
 	color:#8a7967;
 }
 
 div.align-left {
 	float:left;
-	margin-top:50px;
-	margin-left:20px;
+	margin:3.125rem auto auto 1.25rem;
 }
 
 div.align-right {
 	float:right;
-	margin-top:50px;
-	margin-right:20px;
+	margin:3.125rem 1.25rem auto auto;
 }
 
 /* Contacts Page */
-section.contact { height:200px; }
+section.contact { height:12.5rem; }
 
-article.address { padding:25px 25px 0; }
+article.address { padding:1.5625rem 1.5625rem 0; }
 
 article.address p {
 	float:left;
-	width:250px;
+	width:15.625rem;
 	color:#8a7967;
 	margin:0;
 }
 
 article.address iframe {
 	float:right;
-	width:400px;
-	height:300px;
+	width:25rem;
+	height:18.75rem;
 }
 
 section.parish-leaders h4,
 section.video h4 {
-	padding:20px 0 40px;
+	padding:1em 0 2em;
 	text-align:center;
-	width:715px;
-	font-family:"Times New Roman",Times,serif;
-	font-size:20px;
 }
 
 article.person {
-	width:33%;
 	float:left;
-	padding-left:25px;
+	padding:0 0 0 1.5625rem;
 }
 
 article.person img {
-	width:100%;
+	width:auto;
 	height:auto;
+	max-width:100%;
 }
 
 article.person ul {
-	margin:10px 0 50px;
+	margin:0.625rem 0 3.125rem;
 	color:#8a7967;
 }
 
@@ -418,81 +459,55 @@ article.person ul a { color:#8a7967; }
 /* Single Post*/
 article.post-article img {
 	float:left;
-	width:200px;
-	height:200px;
-	margin-top:3px;
-	margin-right:15px;
-	margin-bottom:5px;
+	width:auto;
+	height:auto;
+	max-width:12.5rem;
+	max-height:12.5rem;
+	margin:0.1875rem 0.9375rem 0.3125rem auto;
 }
 
-h4.article-header { font-size:18px; }
-
 p.article-info {
-	margin-top:5px;
-	margin-bottom:25px;
-	font-size:14px;
+	margin:0.3125rem auto 1.5625rem;
 }
 
 /* Side Bar */
 div.sidebar-contents {
-	padding:10px 10px 0 20px;
+	padding:0.625rem 0.625rem 0 1.25rem;
 	color:#fff;
 }
 
-div.sidebar-images { margin-top:65px; }
+div.sidebar-images {
+	margin:4.0625rem auto auto;
+}
 
 img.logo {
 	position:absolute;
-	top:-65px;
-	left:55px;
+	top:-4.0625rem;
+	left:3.4375rem;
 	z-index:1;
 }
 
 h2.welcome {
 	text-align:center;
-	text-transform:lowercase;
-	font-family:"Times New Roman",Times,serif;
-	font-style:italic;
-	margin-top:30px;
-	margin-bottom:25px;
-	font-size:24px;
+	margin:1.25em auto 1.04em;
 	color:#fff;
-}
-
-div.sidebar-contents p {
-	padding-bottom:35px;
-	border-bottom-width:2px;
-	border-bottom-style:solid;
-	margin-bottom:0;
 }
 
 h2.sidebar,
 h2.widgettitle {
 	text-align:center;
-	text-transform:uppercase;
-	font-family:"Times New Roman",Times,serif;
-	margin-top:10px;
-	margin-bottom:25px;
-	font-size:20px;
+	margin:0.5em auto 1.25em;
 	color:#fff;
 }
 
-/* sidebar - service times */
-div.service-times-wrapper {
-	padding-bottom:35px;
-	border-bottom-width:2px;
-	border-bottom-style:solid;
-}
+div.sidebar-contents p { margin:auto auto 0; }
 
-span.times {
-	font-weight:normal;
-	font-size:14px;
-}
-
-/* sidebar - subscribe */
+.sidebar-contents div.widget,
+div.sidebar-contents p,
+div.service-times-wrapper,
 div.widget_simplesubscribe {
-	padding-bottom:35px;
-	border-bottom-width:2px;
+	padding:0 0 2.1875rem;
+	border-bottom-width:0.125rem;
 	border-bottom-style:solid;
 }
 
@@ -501,84 +516,69 @@ input { width:100%; }
 input[type=submit] {
 	border:none;
 	text-align:center;
-	padding:0;
-	margin-top:10px;
-	padding:15px;
-	text-transform:uppercase;
+	margin:0.625rem auto auto;
+	padding:0.9375rem;
 	color:#fff;
-	font-family:'Arial Narrow',sans-serif;
-	letter-spacing:1px;
 }
 
 /* sidebar - parish leaders */
-div.parish-leaders-wrapper { padding-bottom:35px; }
+div.parish-leaders-wrapper { padding:0 0 2.1875rem; }
 
-article.people-sidebar { padding:5px 0; }
+article.people-sidebar { padding:0.3125rem 0; }
 
 article.people-sidebar img{
 	float:left;
-	width:30%;
+	width:auto;
 	height:auto;
+	max-width:4.375rem;
 }
 
 article.people-sidebar ul {
 	float:left;
-	width:70%;
-	font-size:13px;
-	padding:5px 0 0 10px;
+	width:65%;
+	padding:0.3125rem 0 0 5%;
 }
 
 article.people-sidebar ul a{ color:#fff; }
-
-article.people-sidebar h4 {
-	font-style:italic;
-	font-family:"Times New Roman",Times,serif;
-	text-transform:none;
-}
-
-a.more-link:link,
-a.more-link:visited {
-	font-style:italic;
-	font-weight:bold;
-}
 
 div.sidebar-contents p.button {
 	border-bottom:none;
 	text-align:center;
 	padding:0;
-	font-weight:bold;
 }
 
 div.sidebar-contents p.button a:link,
 div.sidebar-contents p.button a:visited {
-	padding:15px 30px;
+	padding:0.9375rem 1.875rem;
 	display:block;
 	text-decoration:none;
-	text-transform:uppercase;
 	color:#fff;
-	font-family:'Arial Narrow',sans-serif;
 }
 
 /* Footer */
 footer {
 	width:100%;
-	height:160px;
-	float:left;
+	height:auto;
+	min-height:10rem;
+	float:none;
+	clear:both;
 	z-index:1;
 }
 
 footer p {
 	margin:0;
-	padding:15px 0 0 20px;
+	padding:0.9375rem 0 0 1.25rem;
 	color:#fff;
 }
 
 footer img {
-	position:absolute;
-	top:20px;
-	left:411px;
+	width:auto;
+	height:auto;
+	max-width:137px;
+	max-height:85px;
+	margin:auto;
+	display:none; /* Mobile first. See media queries */
 }
-
 
 
 /* ----------------------------------------------------------------------------------------------------------
@@ -590,7 +590,73 @@ footer img {
 	/* Place your styles here for all widths greater than 400px */
 }
 
+/* 960 and up */
+@media screen and (min-width:960px) {
+	div.main-wrapper { width:960px; }
+
+	div.section-wrapper { width:715px; }
+
+	aside { width:245px; }
+
+	nav { width:715px; }
+
+	div.wrap { width:715px; }
+
+	section { width:715px; }
+
+	div.home-wrapper { padding:0 1.5625rem 0 0; }
+
+	article.other-post {
+		display:inline-block;
+		width:32.3%;
+		padding:0 0 0 1.5625rem;
+		vertical-align:top;
+	}
+
+	article.main-post { width:715px; }
+
+	article.second-posts {
+		width:49.1%;
+		display:inline-block;
+	}
+
+	article.person { width:33%; }
+
+	section.parish-leaders h4,
+	section.video h4 { width:715px; }
+
+	article.video-post { padding:0 0 0 1.5625rem; }
+
+	article.rss-post {
+		width:49%;
+		padding:0 0 0 1.5625rem;
+	}
+
+	footer img {
+		position:absolute;
+		top:20px;
+		left:411px;
+		display:block;
+	}
+
+}
+
+
 /* Retina Display */
 @media screen and (-webkit-min-device-pixel-ratio:2) {
 	/* Place your styles here for all 'Retina' screens */
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------
+05 Accessibility Styles
+---------------------------------------------------------------------------------------------------------- */
+
+.screen-reader-text {
+	overflow:hidden;
+	font-size:1px;
+	line-height:0;
+	height:0;
+	width:0;
+	text-indent:-10000px;
 }

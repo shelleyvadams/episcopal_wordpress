@@ -58,13 +58,6 @@ article.main-post img { border-color:#332a86; }
 
 article.video-post iframe { border-color:#d5d10e; }
 
-article.rss-post {
-	width:46.35%;
-	margin-left:25px;
-	padding:25px;
-	background-color:#d5d10e;
-}
-
 section.parish-leaders h4,
 section.video h4 {
 	color:#332a86;
@@ -77,12 +70,11 @@ section.video h4 {
 
 h4.article-header { color:#332a86; }
 
-div.sidebar-contents p { border-bottom-color:#d5d10e; }
-
-div.service-times-wrapper { border-bottom-color:#d5d10e; }
-
 span.times { color:#332a86; }
 
+.sidebar-contents div.widget,
+div.sidebar-contents p,
+div.service-times-wrapper,
 div.widget_simplesubscribe { border-bottom-color:#d5d10e; }
 
 a.more-link:link,
@@ -104,4 +96,3 @@ footer {
 	background-image:none;
 	background-color:#332a86;
 }
-
