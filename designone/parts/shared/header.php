@@ -17,9 +17,9 @@
 
 	<div class="main-border"></div>
 
-	<div class="slide-show">
-		<?php do_action('slideshow_deploy'); ?>
-	</div>
+	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('slideshow')) : else : ?>
+
+	<?php endif; ?>
 
 	<div class="main-border"></div>
 </header>

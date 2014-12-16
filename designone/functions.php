@@ -206,4 +206,12 @@
 			'after_widget'  => '</div>',
 		));
 
+		register_sidebar(array(
+			'name' => 'Header slideshow',
+			'id'   => 'slideshow',
+			'description'   => 'If you\'re using slideshow plugin provides a widget, you can add a slideshow to your site header.',
+			'before_widget' => '<div id="%1$s" class="widget slide-show %2$s">',
+			'after_widget'  => '</div>',
+		));
+
 	}
