@@ -41,8 +41,6 @@ h2.widgettitle { border-color:#d11242; }
 a.more-link:link,
 a.more-link:visited { color:#d11242; }
 
-span.times { color:#d11242; }
-
 input[type=submit],
 div.sidebar-contents p.button {
 	background:-webkit-linear-gradient(#d11242,#910d2c);

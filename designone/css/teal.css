@@ -57,8 +57,6 @@ h2.widgettitle {
 a.more-link:link,
 a.more-link:visited { color:#37bdb2; }
 
-span.times { color:#37bdb2; }
-
 input[type=submit],
 div.sidebar-contents p.button {
 	background:-webkit-linear-gradient(#37bdb2,#028a7f);

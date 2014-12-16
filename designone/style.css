@@ -168,11 +168,6 @@ a.more-link:visited {
 	font-weight:bold;
 }
 
-span.times {
-	font-weight:normal;
-	font-size:0.875rem;
-}
-
 input[type=submit] {
 	text-transform:uppercase;
 	font-family:'Arial Narrow',sans-serif;
@@ -514,12 +509,6 @@ h2.widgettitle {
 	border-style:solid none;
 	border-width:0.125rem 0;
 	padding:0.625rem 0;
-}
-
-/* sidebar - service times */
-div.service-times-wrapper {
-	margin-top:0.9375rem;
-	padding-bottom:2.1875rem;
 }
 
 /* sidebar - subscribe */
