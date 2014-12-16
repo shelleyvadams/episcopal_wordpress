@@ -167,19 +167,6 @@
 		<?php endif;
 	}
 
-	// Remove old copyright text
-	add_action( 'init' , 'mh_remove_copy' , 15 );
-	function mh_remove_copy() {
-		remove_action( 'attitude_footer', 'attitude_footer_info', 30 );
-	}
-
-	// Add my own copyright text
-	add_action( 'attitude_footer' , 'mh_footer_info' , 30 );
-	function mh_footer_info() {
-		$output = '<div class="copyright">'.'Copyright © [the-year] [site-link] Powered by: SUPER MARTIANS FROM MARS! '.'</div><!-- .copyright -->';
-		echo do_shortcode( $output );
-	}
-
 	add_action( 'init', 'my_add_excerpts_to_pages' );
 	function my_add_excerpts_to_pages() {
 		add_post_type_support( 'page', 'excerpt' );
@@ -288,7 +275,15 @@
 		register_sidebar(array(
 			'name' => 'Sidebar',
 			'id'   => 'sidebar',
-			'description'   => 'Area for sidebar widgets.',
+			'description'   => 'Sidebars are a common location for widgets.',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+		));
+
+		register_sidebar(array(
+			'name' => 'Footer',
+			'id'   => 'footer',
+			'description'   => 'Located immediately before the footer logo, this is great spot for a text-widget containing a copyright statement.',
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 		));
@@ -296,7 +291,7 @@
 		register_sidebar(array(
 			'name' => 'Header',
 			'id'   => 'header',
-			'description'   => 'Widget area before site header.',
+			'description'   => 'Before site header, this is an ideal location for social media icons.',
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 		));

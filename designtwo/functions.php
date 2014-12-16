@@ -298,7 +298,15 @@
 		register_sidebar(array(
 			'name' => 'Sidebar',
 			'id'   => 'sidebar',
-			'description'   => 'Area for sidebar widgets.',
+			'description'   => 'Sidebars are a common location for widgets.',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+		));
+
+		register_sidebar(array(
+			'name' => 'Footer',
+			'id'   => 'footer',
+			'description'   => 'Located immediately before the footer logo, this is great spot for a text-widget containing a copyright statement.',
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 		));
@@ -306,7 +314,7 @@
 		register_sidebar(array(
 			'name' => 'Header',
 			'id'   => 'header',
-			'description'   => 'Widget area before site header, ideal for social media icons.',
+			'description'   => 'Before site header, this is an ideal location for social media icons.',
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 		));
