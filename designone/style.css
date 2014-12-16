@@ -134,6 +134,7 @@ h3 {
 
 article.main-post { font-size:1.25rem; }
 
+article.regular-page h1.page-title,
 article.main-post h4 { font-size:2.5rem; }
 
 article.second-posts h4 { font-size:1.375rem; }
@@ -162,8 +163,8 @@ h2.widgettitle {
 	font-size:1.25rem;
 }
 
-a.more-link:link,
-a.more-link:visited {
+aside a.more-link:link,
+aside a.more-link:visited {
 	font-style:italic;
 	font-weight:bold;
 }
@@ -171,14 +172,6 @@ a.more-link:visited {
 input[type=submit] {
 	text-transform:uppercase;
 	font-family:'Arial Narrow',sans-serif;
-}
-
-article.people-sidebar ul { font-size:0.8125rem; }
-
-article.people-sidebar h4 {
-	font-style:italic;
-	font-family:"Times New Roman",Times,serif;
-	text-transform:none;
 }
 
 div.sidebar-contents p.button { font-weight:bold; }
@@ -217,6 +210,19 @@ body {
 	color:#8a7967;
 }
 
+h1 a:link,
+h1 a:visited,
+h2 a:link,
+h2 a:visited,
+h3 a:link,
+h3 a:visited,
+h4 a:link,
+h4 a:visited,
+h5 a:link,
+h5 a:visited,
+h6 a:link,
+h6 a:visited { color:inherit; }
+
 div.main-wrapper { margin:0 auto; }
 
 div.section-wrapper { background-color:#b8aea5; }
@@ -239,10 +245,10 @@ div.header-wrapper {
 	position:relative;
 }
 
-h1 { display:inline-block; }
-
-h1 a:link,
-h1 a:visited { color:#fff; }
+h1#site-title {
+	display:inline-block;
+	color:#fff;
+}
 
 img.logo {
 	width:10rem;
@@ -330,7 +336,7 @@ article.main-post {
 	margin-left:1.5625rem;
 }
 
-article.main-post h4{
+article.main-post h4 {
 	text-align:center;
 	margin-bottom:0.3125rem;
 }
@@ -365,13 +371,6 @@ article.second-posts img {
 article.video-post { padding:0 0 1.5625rem 1.5625rem; }
 
 article.video-post iframe { border:0.625rem solid #b8aea5; }
-
-article.rss-post {
-	float:left;
-	margin-left:1.5625rem;
-	background-color:#b8aea5;
-	padding:1.25rem;
-}
 
 /* About */
 span.letter {
@@ -460,23 +459,6 @@ h4.banner {
 	background-position:center center;
 }
 
-article.person {
-	float:left;
-	padding-left:1.5625rem;
-}
-
-article.person img {
-	width:100%;
-	height:auto;
-}
-
-article.person ul {
-	margin:0.625rem 0 3.125rem;
-	color:#8a7967;
-}
-
-article.person ul a { color:#8a7967; }
-
 /* Side Bar */
 aside {
 	float:left;
@@ -527,29 +509,6 @@ input[type=submit] {
 	padding:0.9375rem;
 	color:#fff;
 }
-
-/* sidebar - parish leaders */
-div.parish-leaders-wrapper {
-	margin-top:0.9375rem;
-	padding-bottom:2.1875rem;
-}
-
-article.people-sidebar { padding:0.3125rem 0; }
-
-article.people-sidebar img{
-	float:left;
-	width:auto;
-	max-width:4.25rem;
-	height:auto;
-}
-
-article.people-sidebar ul {
-	float:left;
-	width:70%;
-	padding:0.3125rem 0 0 0.625rem;
-}
-
-article.people-sidebar ul a{ color:#fff; }
 
 div.sidebar-contents p.button {
 	border-bottom:none;
@@ -628,11 +587,7 @@ h2.footer-welcome {
 		display:inline-block;
 	}
 
-	article.rss-post { width:46.2%; }
-
 	h4.banner { width:700px; }
-
-	article.person { width:33%; }
 
 	aside { width:260px; }
 

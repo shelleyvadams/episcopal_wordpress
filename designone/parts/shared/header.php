@@ -10,7 +10,7 @@
 		</div>
 -->
 
-		<h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+		<h1 id="site-title"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 
 		<img class="logo" src="<?php echo get_bloginfo('template_url'); ?>/img/logo.png" alt="logo"/>
 	</div>

@@ -22,7 +22,10 @@
 
 		<section>
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-			<article class="regular-page"><?php the_content(); ?></article>
+			<article class="regular-page">
+				<h1 class="page-title"><a href="<?php the_permalink(); ?>" title="Permanent link to “<?php the_title(); ?>”"><?php the_title(); ?></a></h1>
+				<?php the_content(); ?>
+			</article>
 			<?php endwhile; ?>
 		</section>
 		<?php include_once 'sidebar.php'; ?>

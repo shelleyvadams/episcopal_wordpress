@@ -27,7 +27,9 @@ h3 { background-color:#37bdb2; }
 	
 article.other-post h4 { color:#37bdb2; }
 
-article.main-post h4,
+article.regular-page h1.page-title,
+article.main-post h4 { color:#37bdb2; }
+
 article.main-post a:link,
 article.main-post a:visited { color:#37bdb2; }
 
@@ -35,16 +37,10 @@ article.second-posts h4 { color:#37bdb2; }
 
 article.video-post iframe { border-color:#abcfc8; }
 
-article.rss-post {
-	background-color:#abcfc8;
-	color:#fff;
-}
-article.rss-post h2 a { color:#fff; }
-	
 h4.article-header { color:#37bdb2; }
 
 aside { color:#8a7967; }
-	
+
 h4.banner,
 nav h2 { background-image:url('../img/header-teal.jpg'); }
 
@@ -65,7 +61,5 @@ div.sidebar-contents p.button {
 	background:linear-gradient(#37bdb2,#028a7f);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#37bdb2',endColorstr='#028a7f',GradientType=0);
 }
-
-article.people-sidebar ul a { color:#8a7967; }
 
 footer { background-color:#8a7967; }

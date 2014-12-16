@@ -22,13 +22,13 @@ h3 { background-color:#036cb6; }
 
 article.other-post h4 { color:#036cb6; }
 
-article.main-post h4,
+article.regular-page h1.page-title,
+article.main-post h4 { color:#036cb6; }
+
 article.main-post a:link,
 article.main-post a:visited { color:#036cb6; }
 
 article.second-posts h4 { color:#036cb6; }
-
-article.rss-post { color:#036cb6; }
 
 h4.article-header { color:#036cb6; }
 
