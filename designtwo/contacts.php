@@ -8,7 +8,7 @@
 		<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/header' ) ); ?>
 
 		<div class="wrap">
-			<section class"contact">
+			<section class="contact">
 				<?php $id = get_the_ID(); ?>
 
 					<?php
