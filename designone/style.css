@@ -145,11 +145,6 @@ h4.article-header { font-size:1.125rem; }
 
 p.article-info { font-size:0.875rem; }
 
-h4.banner {
-	font-family:'Arial Narrow',sans-serif;
-	font-size:1.25rem;
-}
-
 aside { font-weight:lighter; }
 
 nav h2 {
@@ -367,11 +362,6 @@ article.second-posts img {
 	margin-bottom:0.625rem;
 }
 
-/* Home Page:video */
-article.video-post { padding:0 0 1.5625rem 1.5625rem; }
-
-article.video-post iframe { border:0.625rem solid #b8aea5; }
-
 /* About */
 span.letter {
 	float:left;
@@ -430,33 +420,6 @@ article.post-article img {
 p.article-info {
 	margin-top:0.3125rem;
 	margin-bottom:1.5625rem;
-}
-
-/* Contacts Page */
-section.contact { height:12.5rem; }
-
-article.address { padding:0 1.5625rem; }
-
-article.address p {
-	float:left;
-	width:15.625rem;
-	color:#8a7967;
-	margin:0;
-}
-
-article.address iframe {
-	float:right;
-	width:25rem;
-	height:18.75rem;
-}
-
-h4.banner {
-	padding:1.25rem 0;
-	margin:1.5625rem 0;
-	text-align:center;
-	color:#fff;
-	background-repeat:no-repeat;
-	background-position:center center;
 }
 
 /* Side Bar */
@@ -586,8 +549,6 @@ h2.footer-welcome {
 		width:49.1%;
 		display:inline-block;
 	}
-
-	h4.banner { width:700px; }
 
 	aside { width:260px; }
 
