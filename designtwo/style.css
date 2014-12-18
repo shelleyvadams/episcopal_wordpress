@@ -135,19 +135,12 @@ h3 { font-size:1.25rem; }
 
 article.second-posts h4 { font-size:1.375rem; }
 
-section.parish-leaders h4,
 section.video h4 {
 	font-family:"Times New Roman",Times,serif;
 	font-size:1.25rem;
 }
 
 h4.article-header { font-size:1.125rem; }
-
-article.people-sidebar h4 {
-	font-style:italic;
-	font-family:"Times New Roman",Times,serif;
-	text-transform:none;
-}
 
 nav li { font-size:1rem; }
 
@@ -165,13 +158,6 @@ span.lowercase {
 span.letter { font-size:4.375rem; }
 
 p.article-info { font-size:0.875rem; }
-
-span.times {
-	font-weight:normal;
-	font-size:0.875rem;
-}
-
-article.people-sidebar ul { font-size:0.8125rem; }
 
 a.more-link:link,
 a.more-link:visited {
@@ -414,48 +400,6 @@ div.align-right {
 	margin:3.125rem 1.25rem auto auto;
 }
 
-/* Contacts Page */
-section.contact { height:12.5rem; }
-
-article.address { padding:1.5625rem 1.5625rem 0; }
-
-article.address p {
-	float:left;
-	width:15.625rem;
-	color:#8a7967;
-	margin:0;
-}
-
-article.address iframe {
-	float:right;
-	width:25rem;
-	height:18.75rem;
-}
-
-section.parish-leaders h4,
-section.video h4 {
-	padding:1em 0 2em;
-	text-align:center;
-}
-
-article.person {
-	float:left;
-	padding:0 0 0 1.5625rem;
-}
-
-article.person img {
-	width:auto;
-	height:auto;
-	max-width:100%;
-}
-
-article.person ul {
-	margin:0.625rem 0 3.125rem;
-	color:#8a7967;
-}
-
-article.person ul a { color:#8a7967; }
-
 /* Single Post*/
 article.post-article img {
 	float:left;
@@ -504,7 +448,6 @@ div.sidebar-contents p { margin:auto auto 0; }
 
 .sidebar-contents div.widget,
 div.sidebar-contents p,
-div.service-times-wrapper,
 div.widget_simplesubscribe {
 	padding:0 0 2.1875rem;
 	border-bottom-width:0.125rem;
@@ -520,26 +463,6 @@ input[type=submit] {
 	padding:0.9375rem;
 	color:#fff;
 }
-
-/* sidebar - parish leaders */
-div.parish-leaders-wrapper { padding:0 0 2.1875rem; }
-
-article.people-sidebar { padding:0.3125rem 0; }
-
-article.people-sidebar img{
-	float:left;
-	width:auto;
-	height:auto;
-	max-width:4.375rem;
-}
-
-article.people-sidebar ul {
-	float:left;
-	width:65%;
-	padding:0.3125rem 0 0 5%;
-}
-
-article.people-sidebar ul a{ color:#fff; }
 
 div.sidebar-contents p.button {
 	border-bottom:none;
@@ -620,9 +543,6 @@ footer img {
 		display:inline-block;
 	}
 
-	article.person { width:33%; }
-
-	section.parish-leaders h4,
 	section.video h4 { width:715px; }
 
 	article.video-post { padding:0 0 0 1.5625rem; }

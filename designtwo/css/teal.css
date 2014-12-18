@@ -57,7 +57,6 @@ article.main-post img { border-color:#37bdb2; }
 
 article.video-post iframe { border-color:#332a86; }
 
-section.parish-leaders h4,
 section.video h4 {
 	color:#37bdb2;
 	background:-webkit-linear-gradient(#c4ece8,#fff);
@@ -69,11 +68,8 @@ section.video h4 {
 
 h4.article-header { color:#37bdb2; }
 
-span.times { color:#332a86; }
-
 .sidebar-contents div.widget,
 div.sidebar-contents p,
-div.service-times-wrapper,
 div.widget_simplesubscribe { border-bottom-color:#332a86; }
 
 a.more-link:link,
