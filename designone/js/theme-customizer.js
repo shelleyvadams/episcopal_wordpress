@@ -1,3 +1,7 @@
+/*
+ * Partially based on Tom McFarlin's Theme Customizer Example (GPLv2)
+ * See https://github.com/tommcfarlin/theme-customizer-example/
+ */
 (function( $ ) {
 	"use strict";
 

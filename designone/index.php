@@ -17,11 +17,8 @@
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/navigation' ) ); ?>
-
 <div class="section-wrapper clearfix">
-
-		<section>
+		<main>
 
 			<div class="table-wrapper">
 				<table class="posts-table">
@@ -43,8 +40,7 @@
 				<div class="pag nav-previous align-right"><?php next_posts_link( 'Older Posts >', $the_query->max_num_pages ); ?></div>
 
 			</div>
-		</section>
-
+		</main>
 		<?php include_once 'sidebar.php'; ?>
 	</div>
 

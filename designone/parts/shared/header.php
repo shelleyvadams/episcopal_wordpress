@@ -15,11 +15,23 @@
 		<img class="logo" src="<?php echo get_bloginfo('template_url'); ?>/img/logo.png" alt="logo"/>
 	</div>
 
+<!--
 	<div class="main-border"></div>
-
+-->
 	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('slideshow')) : else : ?>
 
 	<?php endif; ?>
 
+<!--
 	<div class="main-border"></div>
+-->
 </header>
+
+<nav class="clearfix">
+	<?php wp_nav_menu( array(
+		'primary' => 'Primary Navigation',
+		'depth'   => 1,
+	) ); ?>
+
+	<h2>Welcome</h2>
+</nav>

@@ -16,20 +16,16 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/navigation' ) ); ?>
-
 	<div class="section-wrapper clearfix">
-
-		<section>
+		<main>
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<article class="regular-page">
 				<h1 class="page-title"><a href="<?php the_permalink(); ?>" title="Permanent link to “<?php the_title(); ?>”"><?php the_title(); ?></a></h1>
 				<?php the_content(); ?>
 			</article>
 			<?php endwhile; ?>
-		</section>
+		</main>
 		<?php include_once 'sidebar.php'; ?>
 	</div>
-
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

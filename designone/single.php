@@ -11,11 +11,8 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/navigation' ) ); ?>
-<div class="section-wrapper clearfix">
-
-
-		<section>
+	<div class="section-wrapper clearfix">
+		<main>
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 			<article class="post-article clearfix">
@@ -25,10 +22,8 @@
 				<div class="post-content-wrapper"><?php the_content(); ?></div>
 			</article>
 			<?php endwhile; ?>
-		</section>
+		</main>
 		<?php include_once 'sidebar.php'; ?>
 	</div>
-
-
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

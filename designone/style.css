@@ -35,7 +35,7 @@ CONTENTS:
 /* For absolutely positioning elements within containers (add more to the list if need be) */
 div,
 article,
-section,
+main,
 header,
 footer,
 nav,
@@ -98,7 +98,9 @@ h2,
 h3,
 h4,
 h5,
-h6 { font-weight:bold; }
+h6 {
+	font-weight:bold;
+}
 
 body {
 	font-smoothing:antialiased;
@@ -116,21 +118,16 @@ nav {
 	text-transform:uppercase;
 }
 
-h1 {
-	font-size:1.25rem;
-	text-transform:uppercase;
-}
+h1 { font-size:1.25rem; }
 
-nav a:link,
-nav a:visited {
-	font-size:1rem;
-	text-transform:uppercase;
-}
+nav h2 { font-size:1.5625rem; }
 
-h3 {
-	text-transform:uppercase;
-	font-size:1.25rem;
-}
+h2.sidebar,
+h2.widgettitle { font-size:1.25rem; }
+
+h3 { font-size:1.25rem; }
+
+nav { font-size:1rem; }
 
 article.main-post { font-size:1.25rem; }
 
@@ -146,17 +143,6 @@ h4.article-header { font-size:1.125rem; }
 p.article-info { font-size:0.875rem; }
 
 aside { font-weight:lighter; }
-
-nav h2 {
-	text-transform:uppercase;
-	font-size:1.5625rem;
-}
-
-h2.sidebar,
-h2.widgettitle {
-	text-transform:uppercase;
-	font-size:1.25rem;
-}
 
 aside a.more-link:link,
 aside a.more-link:visited {
@@ -218,9 +204,10 @@ h5 a:visited,
 h6 a:link,
 h6 a:visited { color:inherit; }
 
-div.main-wrapper { margin:0 auto; }
-
-div.section-wrapper { background-color:#b8aea5; }
+div.main-wrapper {
+	margin:0 auto;
+	background-color:#b8aea5;
+}
 
 a:link,
 a:visited { text-decoration:none; }
@@ -250,13 +237,33 @@ img.logo {
 	position:absolute;
 	top:0.0625rem;
 	right:1.25rem;
-	z-index:1;
+	z-index:10;
 	margin-top:0.625rem;
 }
 
 div.slide-show { height:auto; }
 
+header { padding-bottom:0.5rem; }
+
+.widget.slide-show:before,
+header:before {
+	display:block;
+	content:' ';
+	overflow:hidden;
+}
+header:before {
+	background-position:bottom;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:1;
+}
+
+.widget.slide-show:before,
+header:before,
 div.main-border {
+	background-repeat:repeat-x;
 	height:0.5rem;
 	max-height:8px;
 }
@@ -266,8 +273,6 @@ nav {
 	display:table;
 	z-index:1;
 }
-
-div.menu-primary-navigation-container { float:left; }
 
 nav li {
 	display:inline-block;
@@ -290,7 +295,7 @@ nav a:active { background-color:#b8aea5; }
 li.current_page_item a { background-color:#dbd6d0; }
 
 /* Main Content */
-section {
+main {
 	min-height:1400px;
 	float:left;
 	background-color:#dbd6d0;
@@ -490,6 +495,7 @@ div.sidebar-contents p.button a:visited {
 
 /* Footer */
 footer {
+	clear:both;
 	height:auto;
 	min-height:10rem;
 	z-index:1;
@@ -533,9 +539,7 @@ h2.footer-welcome {
 
 	div.main-wrapper { width:960px; }
 
-	div.menu-primary-navigation-container { width:700px; }
-
-	section { width:700px; }
+	main { width:700px; }
 
 	article.other-post {
 		display:inline-block;

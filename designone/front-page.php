@@ -2,11 +2,7 @@
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/navigation' ) ); ?>
-
-	<div class="section-wrapper clearfix">
-
-		<section>
+		<main>
 			<div class="home-wrapper clearfix">
 
 			<?php $args = array(
@@ -29,9 +25,8 @@
 					<?php endwhile; ?>
 				<?php endif; ?>
 			</div>
-			</section>
+			</main>
 
 		<?php include_once 'sidebar.php'; ?>
-	</div>
 
 <?php Starkers_Utilities::get_template_parts( array('parts/shared/footer','parts/shared/html-footer') ); ?>

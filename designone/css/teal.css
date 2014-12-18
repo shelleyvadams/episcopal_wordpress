@@ -7,19 +7,24 @@
  #fff is white
 */
 
-div.section-wrapper { background-color:#abcfc8; }
+div.main-wrapper { background-color:#abcfc8; }
 
 a:link,
-a:visited { color:#37bdb2; }
+a:visited { color:#028a7f; }
 
 header { background-image:url('../img/header-teal.jpg'); }
-	
+
+.widget.slide-show:before,
+header:before,
 div.main-border { background-image:url('../img/border-teal.png'); }
-	
-div.menu-primary-navigation-container { background-color:#37bdb2; }
+
+nav { background-color:#37bdb2; }
 
 nav a:hover,
-nav a:active { color:#37bdb2; }
+nav a:active {
+	color:#028a7f;
+	background-color:#abcfc8;
+}
 
 li.current_page_item a { color:#37bdb2; }
 

@@ -9,9 +9,11 @@ a:visited { color:#036cb6; }
 
 header { background-image:url('../img/header-blue.jpg'); }
 
+.widget.slide-show:before,
+header:before,
 div.main-border { background-image:url('../img/border-blue.png'); }
 
-div.menu-primary-navigation-container { background-color:#036cb6; }
+nav { background-color:#036cb6; }
 
 nav a:hover,
 nav a:active { color:#036cb6; }
