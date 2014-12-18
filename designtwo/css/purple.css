@@ -56,17 +56,6 @@ article.main-post {
 
 article.main-post img { border-color:#332a86; }
 
-article.video-post iframe { border-color:#d5d10e; }
-
-section.video h4 {
-	color:#332a86;
-	background:-webkit-linear-gradient(#c3c0db,#fff);
-	background:-o-linear-gradient(#c3c0db,#fff);
-	background:-moz-linear-gradient(#c3c0db,#fff);
-	background:linear-gradient(#c3c0db,#fff);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c3c0db',endColorstr='#ffffff',GradientType=0);
-}
-
 h4.article-header { color:#332a86; }
 
 .sidebar-contents div.widget,

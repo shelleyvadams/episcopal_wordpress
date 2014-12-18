@@ -135,11 +135,6 @@ h3 { font-size:1.25rem; }
 
 article.second-posts h4 { font-size:1.375rem; }
 
-section.video h4 {
-	font-family:"Times New Roman",Times,serif;
-	font-size:1.25rem;
-}
-
 h4.article-header { font-size:1.125rem; }
 
 nav li { font-size:1rem; }
@@ -346,20 +341,6 @@ article.second-posts img {
 	margin:auto auto 0.625rem;
 }
 
-/* Home Page:video */
-article.video-post {
-	margin:auto auto 1.5625rem
-}
-
-article.video-post iframe {
-	border-width:0.625rem;
-	border-style:solid;
-}
-
-article.rss-post {
-	float:left;
-}
-
 /* About */
 span.letter {
 	float:left;
@@ -541,15 +522,6 @@ footer img {
 	article.second-posts {
 		width:49.1%;
 		display:inline-block;
-	}
-
-	section.video h4 { width:715px; }
-
-	article.video-post { padding:0 0 0 1.5625rem; }
-
-	article.rss-post {
-		width:49%;
-		padding:0 0 0 1.5625rem;
 	}
 
 	footer img {
